@@ -416,58 +416,59 @@
 
 	<table border="1" width="100%">
 	<tr>
-		<td style="background:#FFFFCC" colspan="22" align="center">D20 Roll</td>
+		<td style="background:#FFFFCC; font-weight:800;" colspan="22" align="center"><strong>Attack Roll</strong></td>
 	</tr>
 	<tr>
-		<td>ROLL</td>
-		<td><input readonly="true" type="text" value="@{THACO}-(-10)" name="attr_thaco_combat_-10"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(-9)" name="attr_thaco_combat_-9"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(-8)" name="attr_thaco_combat_-8"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(-7)" name="attr_thaco_combat_-7"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(-6)" name="attr_thaco_combat_-6"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(-5)" name="attr_thaco_combat_-5"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(-4)" name="attr_thaco_combat_-4"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(-3)" name="attr_thaco_combat_-3"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(-2)" name="attr_thaco_combat_-2"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(-1)" name="attr_thaco_combat_-1"/></td>
-		<td><input style="color:maroon;" readonly="true" type="text" value="[[@{THACO}-(0)]]" name="attr_thaco_combat_0"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(1)" name="attr_thaco_combat_1"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(2)" name="attr_thaco_combat_2"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(3)" name="attr_thaco_combat_3"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(4)" name="attr_thaco_combat_4"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(5)" name="attr_thaco_combat_5"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(6)" name="attr_thaco_combat_6"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(7)" name="attr_thaco_combat_7"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(8)" name="attr_thaco_combat_8"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(9)" name="attr_thaco_combat_9"/></td>
-		<td><input readonly="true" type="text" value="@{THACO}-(10)" name="attr_thaco_combat_10"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(-10)" name="attr_thaco_combat_-10"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(-9)" name="attr_thaco_combat_-9"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(-8)" name="attr_thaco_combat_-8"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(-7)" name="attr_thaco_combat_-7"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(-6)" name="attr_thaco_combat_-6"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(-5)" name="attr_thaco_combat_-5"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(-4)" name="attr_thaco_combat_-4"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(-3)" name="attr_thaco_combat_-3"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(-2)" name="attr_thaco_combat_-2"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(-1)" name="attr_thaco_combat_-1"/></td>
+		<td class="thaco-table-red"><input disabled="true" class="thaco-table-red" type="text" value="@{THACO}-(0)" name="attr_thaco_combat_0"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(1)" name="attr_thaco_combat_1"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(2)" name="attr_thaco_combat_2"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(3)" name="attr_thaco_combat_3"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(4)" name="attr_thaco_combat_4"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(5)" name="attr_thaco_combat_5"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(6)" name="attr_thaco_combat_6"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(7)" name="attr_thaco_combat_7"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(8)" name="attr_thaco_combat_8"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(9)" name="attr_thaco_combat_9"/></td>
+		<td class="thaco-table-roll"><input disabled="true" class="thaco-table-roll" type="text" value="@{THACO}-(10)" name="attr_thaco_combat_10"/></td>
 	</tr>
 	<tr>
-		<td>AC</td>
-		<td><input readonly="true" type="text" value="-10" name="attr_thaco_combat_ac_-10"/></td>
-		<td><input readonly="true" type="text" value="-9" name="attr_thaco_combat_ac_-9"/></td>
-		<td><input readonly="true" type="text" value="-8" name="attr_thaco_combat_ac_-8"/></td>
-		<td><input readonly="true" type="text" value="-7" name="attr_thaco_combat_ac_-7"/></td>
-		<td><input readonly="true" type="text" value="-6" name="attr_thaco_combat_ac_-6"/></td>
-		<td><input readonly="true" type="text" value="-5" name="attr_thaco_combat_ac_-5"/></td>
-		<td><input readonly="true" type="text" value="-4" name="attr_thaco_combat_ac_-4"/></td>
-		<td><input readonly="true" type="text" value="-3" name="attr_thaco_combat_ac_-3"/></td>
-		<td><input readonly="true" type="text" value="-2" name="attr_thaco_combat_ac_-2"/></td>
-		<td><input readonly="true" type="text" value="-1" name="attr_thaco_combat_ac_-1"/></td>
-		<td><input style="color:maroon;" readonly="true" type="text" value="0" name="attr_thaco_combat_ac_0"/></td>
-		<td><input readonly="true" type="text" value="1" name="attr_thaco_combat_ac_1"/></td>
-		<td><input readonly="true" type="text" value="2" name="attr_thaco_combat_ac_2"/></td>
-		<td><input readonly="true" type="text" value="3" name="attr_thaco_combat_ac_3"/></td>
-		<td><input readonly="true" type="text" value="4" name="attr_thaco_combat_ac_4"/></td>
-		<td><input readonly="true" type="text" value="5" name="attr_thaco_combat_ac_5"/></td>
-		<td><input readonly="true" type="text" value="6" name="attr_thaco_combat_ac_6"/></td>
-		<td><input readonly="true" type="text" value="7" name="attr_thaco_combat_ac_7"/></td>
-		<td><input readonly="true" type="text" value="8" name="attr_thaco_combat_ac_8"/></td>
-		<td><input readonly="true" type="text" value="9" name="attr_thaco_combat_ac_9"/></td>
-		<td><input readonly="true" type="text" value="10" name="attr_thaco_combat_ac_10"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="-10" name="attr_thaco_combat_ac_-10"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="-9" name="attr_thaco_combat_ac_-9"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="-8" name="attr_thaco_combat_ac_-8"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="-7" name="attr_thaco_combat_ac_-7"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="-6" name="attr_thaco_combat_ac_-6"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="-5" name="attr_thaco_combat_ac_-5"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="-4" name="attr_thaco_combat_ac_-4"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="-3" name="attr_thaco_combat_ac_-3"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="-2" name="attr_thaco_combat_ac_-2"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="-1" name="attr_thaco_combat_ac_-1"/></td>
+		<td class="thaco-table-red"><input disabled="true" class="thaco-table-red" type="text" value="0" name="attr_thaco_combat_ac_0"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="1" name="attr_thaco_combat_ac_1"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="2" name="attr_thaco_combat_ac_2"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="3" name="attr_thaco_combat_ac_3"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="4" name="attr_thaco_combat_ac_4"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="5" name="attr_thaco_combat_ac_5"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="6" name="attr_thaco_combat_ac_6"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="7" name="attr_thaco_combat_ac_7"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="8" name="attr_thaco_combat_ac_8"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="9" name="attr_thaco_combat_ac_9"/></td>
+		<td class="thaco-table-ac"><input disabled="true" class="thaco-table-ac" type="text" value="10" name="attr_thaco_combat_ac_10"/></td>
 	</tr>
-		<tr>
-		<td  style="background:#FFCC00;" colspan="22" align="center">AC Hit</td>
+	<tr>
+		<td  style="background:orange; color:black; font-weight:800; height: 25px;" colspan="22" align="center"><strong>Armor Class Hit</strong></td>
+	</tr>
+	<tr>
+		<td  style="height: 5px; background:black;" colspan="22" align="center"></td>
 	</tr>
 
 	</table>
@@ -745,6 +746,9 @@
 </table>
 
 </fieldset> 
+
+
+</div>
 
 </body>
 
