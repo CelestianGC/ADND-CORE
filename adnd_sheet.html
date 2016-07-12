@@ -107,8 +107,8 @@
 	<tr bgcolor="#FFCC00">
 		<td>
 		<input type="number" name="attr_character_strength" class="textinput-number45" value="10" min="-25" max="25" /></td>
-		<td style="width: 85px">
-		<button class ="sheet-blank-roll-button" type="roll" name="roll_stregth_check" value="&{template:default} {{name=Checking @{character_strength} Strength}} {{Result=[[@{character_strength}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Strength</button></td>
+		<td style="width: 100px" align="center">
+		<button style="width:100px" class ="sheet-blank-roll-button" type="roll" name="roll_stregth_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_strength} Strength}} {{Result=[[@{character_strength}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Strength</button></td>
 		<td>
 		<table>
 				<td style="width: 59px">percentile</td>
@@ -135,8 +135,8 @@
 	<tr bgcolor="#FFCC99">
 		<td>
 		<input type="number" name="attr_character_intelligence" class="textinput-number45" value="10" min="-25" max="25" /></td>
-		<td style="width: 85px">
-		<button class ="sheet-blank-roll-button" type="roll" name="roll_intelligence_check" value="&{template:default} {{name=Checking @{character_intelligence} Intelligence}} {{Result=[[@{character_intelligence}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Intelligence</button>
+		<td style="width: 100px" align="center">
+		<button style="width:100px" class ="sheet-blank-roll-button" type="roll" name="roll_intelligence_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_intelligence} Intelligence}} {{Result=[[@{character_intelligence}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Intelligence</button>
 		</td>
 		<td>		<table>
 				<td style="width: 59px">percentile</td>
@@ -160,8 +160,8 @@
 	<tr bgcolor="#FFCC00">
 		<td>
 		<input type="number" name="attr_character_wisdom" class="textinput-number45" value="10" min="-25" max="25" /></td>
-		<td style="width: 85px">
-		<button class ="sheet-blank-roll-button" type="roll" name="roll_wisdom_check" value="&{template:default} {{name=Checking @{character_wisdom} Wisdom}} {{Result=[[@{character_wisdom}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Wisdom</button>
+		<td style="width: 100px" align="center">
+		<button style="width:100px" class ="sheet-blank-roll-button" type="roll" name="roll_wisdom_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_wisdom} Wisdom}} {{Result=[[@{character_wisdom}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Wisdom</button>
 		</td>
 		<td>		<table>
 				<td style="width: 59px">percentile</td>
@@ -182,8 +182,8 @@
 	<tr bgcolor="#FFCC99">
 		<td>
 		<input type="number" name="attr_character_dexterity" class="textinput-number45" value="10" min="-25" max="25" /></td>
-		<td style="width: 85px">
-		<button class ="sheet-blank-roll-button" type="roll" name="roll_dexterity_check" value="&{template:default} {{name=Checking @{character_dexterity} Dexterity}} {{Result=[[@{character_dexterity}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Dexterity</button>
+		<td style="width: 100px" align="center">
+		<button style="width:100px" class ="sheet-blank-roll-button" type="roll" name="roll_dexterity_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_dexterity} Dexterity}} {{Result=[[@{character_dexterity}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Dexterity</button>
 		</td>
 		<td>		<table>
 				<td style="width: 59px">percentile</td>
@@ -204,8 +204,8 @@
 	<tr bgcolor="#FFCC00">
 		<td>
 		<input type="number" name="attr_character_constitution" class="textinput-number45" value="10" min="-25" max="25" /></td>
-		<td style="width: 85px">
-		<button class ="sheet-blank-roll-button" type="roll" name="roll_constition_check" value="&{template:default} {{name=Checking @{character_constitution} Constitution}} {{Result=[[@{character_constitution}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Constitution</button>
+		<td style="width: 100px" align="center">
+		<button style="width:100px" class ="sheet-blank-roll-button" type="roll" name="roll_constition_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_constitution} Constitution}} {{Result=[[@{character_constitution}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Constitution</button>
 		</td>
 		<td>		<table>
 				<td style="width: 59px">percentile</td>
@@ -229,8 +229,8 @@
 	<tr bgcolor="#FFCC99">
 		<td>
 		<input type="number" name="attr_character_charisma" class="textinput-number45" value="10" min="-25" max="25"></td>
-		<td style="width: 85px">
-		<button class ="sheet-blank-roll-button" type="roll" name="roll_charisma_check" value="&{template:default} {{name=Checking @{character_charisma} Charisma}} {{Result=[[@{character_charisma}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Charisma</button>
+		<td style="width: 100px" align="center">
+		<button style="width:100px" class ="sheet-blank-roll-button" type="roll" name="roll_charisma_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_charisma} Charisma}} {{Result=[[@{character_charisma}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Charisma</button>
 		</td>
 		<td>		<table>
 				<td style="width: 59px">percentile</td>
@@ -244,7 +244,7 @@
 		<input type="text" name="attr_character_chr_loyalty" style="width: 28px" value="0" size="3" /></td>
 				<td style="width: 47px">reaction&nbsp; adj.</td>
 				<td style="width: 28px">
-		<input type="text" name="attr_character_chr_reaction" style="width: 28px" value="0" size="3"></td>
+		<input type="text" name="attr_character_chr_reaction" style="width: 28px" value="0" size="3" /></td>
 		</table>
 </td>
 	</tr>
@@ -296,7 +296,7 @@
 			<fieldset class="repeating_profs">
 			<table class="repeat-table-style" width="100%">
 			     <td  class="repeat-tds" style="width: 72px">
-			     	<button class ="sheet-blank-roll-button" type="roll" name="roll_profs_check" value="&{template:default} {{Target=@{profs_ability} }} {{name=Checking Proficiency @{profsname} }} {{Result=[[@{profs_ability}-(1d20-((?{Situational Modifier|0})+(@{profs_modifier})) )]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Check</button>
+			     	<button class ="sheet-blank-roll-button" type="roll" name="roll_profs_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{Target=@{profs_ability} }} {{name=Checking Proficiency @{profsname} }} {{Result=[[@{profs_ability}-(1d20-((?{Situational Modifier|0})+(@{profs_modifier})) )]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Check</button>
 			     </td>
 			     <td  class="repeat-tds" style="width: 170px">
 					<input class="textinput-normal" value="New Proficiency" type="text" name="attr_profsname" />        
@@ -344,7 +344,7 @@
 			<table class="repeat-table-style" width="100%">
 			<tr>
 			     <td  class="repeat-tds" style="width: 70px">
-			     	<button class ="sheet-blank-roll-button" type="roll" name="roll_skill_check" value="&{template:default} {{name=Skill Check for @{skillname} }} {{Target= Less or Equal to @{skill_total} }}  {{Result=[[1d100-(?{Situational Modifier|0})]]}} {{Details=You can succeed if Result is less than or equal to Target.}}">Check</button>
+			     	<button class ="sheet-blank-roll-button" type="roll" name="roll_skill_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Skill Check for @{skillname} }} {{Target= Less or Equal to @{skill_total} }}  {{Result=[[1d100-(?{Situational Modifier|0})]]}} {{Details=You can succeed if Result is less than or equal to Target.}}">Check</button>
 			     </td>
 			     <td  class="repeat-tds" style="width: 170px">
 					<input class="textinput-normal" value="New Skill" type="text" name="attr_skillname" />        
@@ -545,9 +545,9 @@
 <table class="enclose" border="5" width="100%">
 <tr class="enclose" align="center">
 	<td class="enclose" style="background:#663300; height: 24px;">
-	   	<button class="sheet-attack-buttons" style="width:65px;" type="roll" name="roll_attack_check" value="&{template:default} {{name=@{character_name} attacks with @{atk_name} }} {{hit AC=[[@{THACO}-(1d20+(@{atk_modifier_total_hit}+?{Situational Hit Modifier|0}))]] }} {{ Damage=[[@{atk_dmg}+@{atk_modifier_total_dmg}]] (S/M), [[@{atk_ldmg}+@{atk_modifier_total_dmg}]] (L) }} {{Type=@{atk_dmg_type} }} {{Range=@{atk_range} }}">Attack</button>
+	   	<button class="sheet-attack-buttons" style="width:65px;" type="roll" name="roll_attack_check" value="?{Send to|Everyone,|GM-Only,/w GM} &{template:default} {{name=@{character_name} attacks with @{atk_name} }} {{hit AC=[[@{THACO}-(1d20+(@{atk_modifier_total_hit}+?{Situational Hit Modifier|0}))]] }} {{ Damage=[[@{atk_dmg}+@{atk_modifier_total_dmg}]] (S/M), [[@{atk_ldmg}+@{atk_modifier_total_dmg}]] (L) }} {{Type=@{atk_dmg_type} }} {{Range=@{atk_range} }}">Attack</button>
 		<input readonly="true" class="auto-style2" style="-webkit-border-radius: 28;-moz-border-radius: 28;border-radius: 28px; background:#996633; color:white; font-style:bold; border:none; text-align:center;" type="text"  name="attr_atk_name" style="width: 200px"  />
-	   	<button class="sheet-attack-buttons" style="width:65px;" type="roll" name="roll_attack_init" value="&{template:default} {{name=@{character_name} rolls initiative with @{atk_name} }} {{Initiative=[[1d10+(@{atk_speedfactor}+?{Situational Initiative Modifier|0})&{tracker}]] }}">Initiative</button>
+	   	<button class="sheet-attack-buttons" style="width:65px;" type="roll" name="roll_attack_init" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=@{character_name} rolls initiative with @{atk_name} }} {{Initiative=[[1d10+(@{atk_speedfactor}+?{Situational Initiative Modifier|0})&{tracker}]] }}">Initiative</button>
    	</td>
 </tr>
 
@@ -771,7 +771,7 @@
 					Memorize#
 					<input class="textinput-number" type="number" min="0" style="width:50px; background: #996600; -webkit-border-radius: 28;-moz-border-radius: 28;border-radius: 28px; color:yellow; font-style:bold; " value="0" name="attr_spell_memcount"/>
 					<input class="textinput-normal" style="-webkit-border-radius: 28;-moz-border-radius: 28;border-radius: 28px; background:#996633; color:white; text-align:center; " readonly="true" name="attr_spell_name"/>
-					<button type="roll" class ="sheet-blank-roll-button" name="roll_spell_cast" value="&{template:default} {{name=@{spell_name} }} {{Range=@{spell_range} }} {{Duration=@{spell_duration} }} {{Save=@{spell_save} }} {{Area=@{spell_aoe} }} {{Cast Time=@{spell_casttime} }} ?{Show Spell Description|No,|Yes,{{Effect=@{spell_desc} }}} {{Reminder=*Remove one memorized #!* }}">Cast</button>
+					<button type="roll" class ="sheet-blank-roll-button" style="width:50px" name="roll_spell_cast" value="?{Send to|Everyone,|GM-Only,/w GM} &{template:default} {{name=@{spell_name} }} {{Range=@{spell_range} }} {{Duration=@{spell_duration} }} {{Save=@{spell_save} }} {{Area=@{spell_aoe} }} {{Cast Time=@{spell_casttime} }} ?{Show Spell Description|No,|Yes,{{Effect=@{spell_desc} }}} {{Reminder=*Remove one memorized #!* }}">Cast</button>
 				</td>
 			</tr>
 		    <tr>
@@ -1052,7 +1052,7 @@
 <fieldset class="repeating_saves">
 	<table class="repeat-table-style" width="100%" >
 	<tr>
-     	<td style="width: 70px" class="repeat-tds"><button type="roll" class ="sheet-blank-roll-button" name="roll_save_check" value="&{template:default} {{name=@{character_name} saves against @{save_name} }} {{Target=Greater/Equal to @{save_target} }} {{Result=[[1d20+(@{save_total}+?{Situational Save Modifier|0})]] }}">Check</button></td>
+     	<td style="width: 70px" class="repeat-tds"><button type="roll" class ="sheet-blank-roll-button" name="roll_save_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=@{character_name} saves against @{save_name} }} {{Target=Greater/Equal to @{save_target} }} {{Result=[[1d20+(@{save_total}+?{Situational Save Modifier|0})]] }}">Check</button></td>
 		<td style="width: 170px" class="repeat-tds"><input class="textinput-normal" type="text" value="Paralyzation, Poison, or Death Magic" name="attr_save_name" /></td>
 		<td style="width: 60px" class="repeat-tds"><input class="textinput-shortnumber" type="number" value="20" min="1" max="20" name="attr_save_target" /></td>
 		<td style="width: 60px" class="repeat-tds"><input class="textinput-shortnumber" type="number" value="0" name="attr_save_race" /></td>
