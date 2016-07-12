@@ -166,6 +166,13 @@ input.sheet-textinput-number {
   border: none;
 }
 
+input.sheet-textinput-number45 {
+  display: inline-block;
+    width:45px;
+  border: none;
+}
+
+
 input[type=number].sheet-textinput-shortnumber {
   display: inline-block;
     width:inherit;
