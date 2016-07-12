@@ -140,45 +140,45 @@ div.sheet-tab-content
 
 input.sheet-textinput-normal {
     display: inline-block;
-    width: 165px;
+    width:inherit;
     border: none;
 }
 input.sheet-textinput-medium {
     display: inline-block;
-    width: 140px;
+    width:inherit;
     border: none;
 }
 
 input.sheet-textinput-short {
     display: inline-block;
-    width: 120px;
+    width:inherit;
     border: none;
 }
 input.sheet-textinput-short60 {
     display: inline-block;
-    width: 60px;
+    width:inherit;
     border: none;
 }
 
 input.sheet-textinput-number {
   display: inline-block;
-  width: 40px;
+    width:inherit;
   border: none;
 }
 
 input[type=number].sheet-textinput-shortnumber {
   display: inline-block;
-  width: 45px;
+    width:inherit;
   border: none;
 }
 input[type=number].sheet-textinput-bignumber {
   display: inline-block;
-  width: 60px;
+    width:inherit;
   border: none;
 }
 
 select.sheet-select-normal {
-    width: 80px;
+    width:inherit;
     display: inline-block;
     text-align:center;
     padding:1px 1px 1px 1px;
@@ -190,6 +190,24 @@ td.sheet-repeat-headers {
 	color: #000000; 
 	font-weight: bold;
 }
+
+td.sheet-spellslot-headers {
+	text-align:center;
+	border: 1px solid black;
+	background-color: #ffcc00;
+	color: black; 
+	font-weight: bold;
+	width:30px;
+}
+input.sheet-spellslot {
+	text-align:center;
+	border:none;
+	background-color: #ffcc00;
+	color: maroon; 
+	font-weight: bold;
+	width:30px;
+}
+
 th.sheet-repeat-headers {
 	border: 1px solid black;
 	background-color: #ffcc00;
@@ -286,4 +304,14 @@ input.sheet-thaco-table-red {
 .odd {
      border: 1px solid black;
      background-color: #DDD;
+}
+
+input.sheet-hideoption
+{
+    float: left;
+}
+
+input.sheet-hideoption:checked ~ div.sheet-hidebody
+{
+    display: none;
 }

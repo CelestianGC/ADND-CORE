@@ -252,137 +252,157 @@
 </div>
 
 <div class="sheet-tab-content sheet-tab2">
-<h2>Weapon Proficiencies</h2	>
-<table class="repeat-table-style" width="100%">
-	<tr>
-     <td class="repeat-headers" style="padding: 0px; width: 170px">Name</td>
-     <td class="repeat-headers" style="padding: 0px; width: 72px">Hit Modifier</td>
-     <td class="repeat-headers" style="padding: 0px; width: 72px">Damage Modifier</td>
-	 <td class="repeat-headers" style="padding: 0px; width: 170px">Details</td>
-     <td class="repeat-headers" style="padding: 0px; width: 72px">Proficiency Point Cost</td>
-    </tr>
-</table>
+<br />
+	<div>
+			<input type="checkbox" name="attr_hide_weaponprofs" class="hideoption" /><strong>Weapon Proficiencies</strong>
+			<div class="hidebody">
+				<table class="repeat-table-style" width="100%">
+					<tr>
+				     <td class="repeat-headers" style="padding: 0px; width: 170px">Name</td>
+				     <td class="repeat-headers" style="padding: 0px; width: 72px">Hit Modifier</td>
+				     <td class="repeat-headers" style="padding: 0px; width: 72px">Damage Modifier</td>
+					 <td class="repeat-headers" style="padding: 0px; width: 170px">Details</td>
+				     <td class="repeat-headers" style="padding: 0px; width: 72px">Proficiency Point Cost</td>
+				    </tr>
+				</table>
+				
+				<fieldset name="repeating_weaponprofs" class="repeating_weaponprofs">
+				<table class="repeat-table-style" width="100%">
+					<tr>
+				     <td  class="repeat-tds" style="padding: 0px; width: 170px"><input class="textinput-normal" type="text" value="New Weapon" name="attr_weaponprof_name" /></td>
+				     <td  class="repeat-tds" style="padding: 0px; width: 72px"><input class="textinput-number" type="number" value="0" name="attr_weaponprof_hit" /></td>
+				     <td  class="repeat-tds" style="padding: 0px; width: 72px"><input class="textinput-number" type="number" value="0" name="attr_weaponprof_damage" /></td>
+				     <td  class="repeat-tds" style="padding: 0px; width: 170px"><input class="textinput-normal" type="text" value="Need description." name="attr_weaponprof_description" /></td>
+				     <td  class="repeat-tds" style="padding: 0px; width: 72px"><input class="textinput-number" type="number" value="1" min="1" name="attr_profs_cost" /></td>
+					</tr>    
+				</table>
+				</fieldset> 
+				<hr />
+		</div>
+	</div>
+	
+	<div>
+			<input type="checkbox" name="attr_hide_nonweaponprofs" class="hideoption" /><strong>Non-Weapon Proficiencies</strong>
+			<div class="hidebody">
+			<table class="repeat-table-style" width="100%">
+				<tr>
+			     <td class="repeat-headers"  style="width: 72px"></td>
+			     <td class="repeat-headers"  style="width: 170px">Name</td>
+			     <td class="repeat-headers"  style="width: 90px">Ability Base</td>
+			     <td class="repeat-headers"  style="width: 72px">Modifier</td>
+			     <td class="repeat-headers"  style="width: 72px">Proficiency Point Cost</td>
+				</tr>
+			</table>
+			<fieldset class="repeating_profs">
+			<table class="repeat-table-style" width="100%">
+			     <td  class="repeat-tds" style="width: 72px">
+			     	<button class ="sheet-blank-roll-button" type="roll" name="roll_profs_check" value="&{template:default} {{Target=@{profs_ability} }} {{name=Checking Proficiency @{profsname} }} {{Result=[[@{profs_ability}-(1d20-((?{Situational Modifier|0})+(@{profs_modifier})) )]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Check</button>
+			     </td>
+			     <td  class="repeat-tds" style="width: 170px">
+					<input class="textinput-normal" value="New Proficiency" type="text" name="attr_profsname" />        
+			     </td>
+			     <td class="repeat-tds"  style="width: 90px">
+			     <select class="select-normal" name="attr_profs_ability" class="profs-ability">                
+			          <option value="[[@{character_strength}]]">STR</option>
+			          <option value="[[@{character_dexterity}]]">DEX</option>
+			          <option value="[[@{character_intelligence}]]">INT</option>
+			          <option value="[[@{character_wisdom}]]">WIS</option>
+			          <option value="[[@{character_constitution}]]">CON</option>
+			          <option value="[[@{character_charisma}]]">CHR</option>
+			      </select></td>
+			     <td class="repeat-tds"  style="width: 72px">
+				     <input class="textinput-number" type="number" value="0" name="attr_profs_modifier" />
+				 </td>
+			     <td class="repeat-tds"  style="width: 72px">
+				     <input class="textinput-number" type="number" value="0" name="attr_profs_cost" />
+				 </td>
+			
+			</table>
+			</fieldset> 
+			
+			<hr />
+		</div>
+	</div>
 
-<fieldset name="repeating_weaponprofs" class="repeating_weaponprofs">
-<table class="repeat-table-style" width="100%">
-	<tr>
-     <td  class="repeat-tds" style="padding: 0px; width: 170px"><input class="textinput-normal" type="text" value="New Weapon" name="attr_weaponprof_name" /></td>
-     <td  class="repeat-tds" style="padding: 0px; width: 72px"><input class="textinput-number" type="number" value="0" name="attr_weaponprof_hit" /></td>
-     <td  class="repeat-tds" style="padding: 0px; width: 72px"><input class="textinput-number" type="number" value="0" name="attr_weaponprof_damage" /></td>
-     <td  class="repeat-tds" style="padding: 0px; width: 170px"><input class="textinput-normal" type="text" value="Need description." name="attr_weaponprof_description" /></td>
-     <td  class="repeat-tds" style="padding: 0px; width: 72px"><input class="textinput-number" type="number" value="1" min="1" name="attr_profs_cost" /></td>
-	</tr>    
-</table>
-</fieldset> 
-
-	<hr />
-
-<h2>Non-Weapon Proficiencies</h2>
-<table class="repeat-table-style" width="100%">
-	<tr>
-     <td class="repeat-headers"  style="width: 72px"></td>
-     <td class="repeat-headers"  style="width: 170px">Name</td>
-     <td class="repeat-headers"  style="width: 90px">Ability Base</td>
-     <td class="repeat-headers"  style="width: 72px">Modifier</td>
-     <td class="repeat-headers"  style="width: 72px">Proficiency Point Cost</td>
-	</tr>
-</table>
-<fieldset class="repeating_profs">
-<table class="repeat-table-style" width="100%">
-     <td  class="repeat-tds" style="width: 72px">
-     	<button class ="sheet-blank-roll-button" type="roll" name="roll_profs_check" value="&{template:default} {{Target=@{profs_ability} }} {{name=Checking Proficiency @{profsname} }} {{Result=[[@{profs_ability}-(1d20-((?{Situational Modifier|0})+(@{profs_modifier})) )]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Check</button>
-     </td>
-     <td  class="repeat-tds" style="width: 170px">
-		<input class="textinput-normal" value="New Proficiency" type="text" name="attr_profsname" />        
-     </td>
-     <td class="repeat-tds"  style="width: 90px">
-     <select class="select-normal" name="attr_profs_ability" class="profs-ability">                
-          <option value="[[@{character_strength}]]">STR</option>
-          <option value="[[@{character_dexterity}]]">DEX</option>
-          <option value="[[@{character_intelligence}]]">INT</option>
-          <option value="[[@{character_wisdom}]]">WIS</option>
-          <option value="[[@{character_constitution}]]">CON</option>
-          <option value="[[@{character_charisma}]]">CHR</option>
-      </select></td>
-     <td class="repeat-tds"  style="width: 72px">
-	     <input class="textinput-number" type="number" value="0" name="attr_profs_modifier" />
-	 </td>
-     <td class="repeat-tds"  style="width: 72px">
-	     <input class="textinput-number" type="number" value="0" name="attr_profs_cost" />
-	 </td>
-
-</table>
-</fieldset> 
-
-<hr />
-
-<h2>Languages</h2>
-<table class="repeat-table-style" width="100%">
-	<tr>
-     <td class="repeat-headers" style="padding: 0px; width: 170px">Language</td>
-    </tr>
-</table>
-
-<fieldset name="repeating_langs" class="repeating_langs">
-<table class="repeat-table-style" width="100%">
-    <tr>
-     <td  class="repeat-tds" style="padding: 0px; width: 170px">
-	     <input class="textinput-normal" type="text" value="New Language" name="attr_langname" />
-     </td>
-    </tr>
-</table>
-</fieldset> <hr />
-
-<h2>Skills</h2>
-<table style='border-collapse: collapse; border-spacing: 0;' width="100%">
-<tr>
-     <td class="repeat-headers" style="width: 70px"></td>
-     <td class="repeat-headers" style="width: 170px">Name</td>
-     <td class="repeat-headers" style="width: 50px">Base</td>
-     <td class="repeat-headers" style="width: 50px">Race</td>
-     <td class="repeat-headers" style="width: 50px">Dex</td>
-     <td class="repeat-headers" style="width: 50px">Armor</td>
-     <td class="repeat-headers" style="width: 50px">Level</td>
-     <td class="repeat-headers" style="width: 170px">Total</td>
-</tr>
-</table>
-
-<fieldset class="repeating_skills">
-<table class="repeat-table-style" width="100%">
-<tr>
-     <td  class="repeat-tds" style="width: 70px">
-     	<button class ="sheet-blank-roll-button" type="roll" name="roll_skill_check" value="&{template:default} {{name=Skill Check for @{skillname} }} {{Target= Less or Equal to @{skill_total} }}  {{Result=[[1d100-(?{Situational Modifier|0})]]}} {{Details=You can succeed if Result is less than or equal to Target.}}">Check</button>
-     </td>
-     <td  class="repeat-tds" style="width: 170px">
-		<input class="textinput-normal" value="New Skill" type="text" name="attr_skillname" />        
-     </td>
-     
-     <td  class="repeat-tds" style="width: 50px">
-          <input class="textinput-number" type="number" value="0" name="attr_skill_base" />
-	 </td>
-     <td  class="repeat-tds" style="width: 50px">
-	     <input class="textinput-number" type="number" value="0" name="attr_skill_race" />
-	 </td>
-     <td  class="repeat-tds" style="width: 50px">
-	     <input class="textinput-number" type="number" value="0" name="attr_skill_dex" />
-	 </td>
-     <td  class="repeat-tds" style="width: 50px">
-	     <input class="textinput-number" type="number" value="0" name="attr_skill_armor" />
-	 </td>
-     <td  class="repeat-tds" style="width: 50px">
-   	     <input class="textinput-number" type="number" value="0" name="attr_skill_level" />
-	 </td>
-     <td  class="repeat-tds" style="width: 170px">
-	     <input class="textinput-normal" type="text" disabled="true" value="@{skill_base}+@{skill_race}+@{skill_dex}+@{skill_armor}+@{skill_level}" name="attr_skill_total" />
-	 </td>
-</tr>
-</table>
-</fieldset>
+	<div>
+		<input type="checkbox" name="attr_hide_skills" class="hideoption" /><strong>Skills</strong>
+		<div class="hidebody">
+			<table style='border-collapse: collapse; border-spacing: 0;' width="100%">
+			<tr>
+			     <td class="repeat-headers" style="width: 70px"></td>
+			     <td class="repeat-headers" style="width: 170px">Name</td>
+			     <td class="repeat-headers" style="width: 50px">Base</td>
+			     <td class="repeat-headers" style="width: 50px">Race</td>
+			     <td class="repeat-headers" style="width: 50px">Dex</td>
+			     <td class="repeat-headers" style="width: 50px">Armor</td>
+			     <td class="repeat-headers" style="width: 50px">Level</td>
+			     <td class="repeat-headers" style="width: 170px">Total</td>
+			</tr>
+			</table>
+			
+			<fieldset class="repeating_skills">
+			<table class="repeat-table-style" width="100%">
+			<tr>
+			     <td  class="repeat-tds" style="width: 70px">
+			     	<button class ="sheet-blank-roll-button" type="roll" name="roll_skill_check" value="&{template:default} {{name=Skill Check for @{skillname} }} {{Target= Less or Equal to @{skill_total} }}  {{Result=[[1d100-(?{Situational Modifier|0})]]}} {{Details=You can succeed if Result is less than or equal to Target.}}">Check</button>
+			     </td>
+			     <td  class="repeat-tds" style="width: 170px">
+					<input class="textinput-normal" value="New Skill" type="text" name="attr_skillname" />        
+			     </td>
+			     
+			     <td  class="repeat-tds" style="width: 50px">
+			          <input class="textinput-number" type="number" value="0" name="attr_skill_base" />
+				 </td>
+			     <td  class="repeat-tds" style="width: 50px">
+				     <input class="textinput-number" type="number" value="0" name="attr_skill_race" />
+				 </td>
+			     <td  class="repeat-tds" style="width: 50px">
+				     <input class="textinput-number" type="number" value="0" name="attr_skill_dex" />
+				 </td>
+			     <td  class="repeat-tds" style="width: 50px">
+				     <input class="textinput-number" type="number" value="0" name="attr_skill_armor" />
+				 </td>
+			     <td  class="repeat-tds" style="width: 50px">
+			   	     <input class="textinput-number" type="number" value="0" name="attr_skill_level" />
+				 </td>
+			     <td  class="repeat-tds" style="width: 170px">
+				     <input class="textinput-normal" type="text" disabled="true" value="@{skill_base}+@{skill_race}+@{skill_dex}+@{skill_armor}+@{skill_level}" name="attr_skill_total" />
+				 </td>
+			</tr>
+			</table>
+			</fieldset>
+			<hr />
+		</div>
+	</div>
+	
+	<div>
+		<input type="checkbox" name="attr_hide_languages" class="hideoption" checked="checked" /><strong>Languages</strong>
+		<div class="hidebody">
+			<table class="repeat-table-style" width="100%">
+				<tr>
+			     <td class="repeat-headers" style="padding: 0px; width: 170px">Language</td>
+			    </tr>
+			</table>
+			
+			<fieldset name="repeating_langs" class="repeating_langs">
+			<table class="repeat-table-style" width="100%">
+			    <tr>
+			     <td  class="repeat-tds" style="padding: 0px; width: 170px">
+				     <input class="textinput-normal" type="text" value="New Language" name="attr_langname" />
+			     </td>
+			    </tr>
+			</table>
+			</fieldset> 
+			<hr />
+		</div>
+	</div>
 
 </div>
 
 <div class="sheet-tab-content sheet-tab3">
-<h2>Equipment</h2>
+
+<br />
+<strong>Equipment</strong>
 <table class="repeat-table-style" width="100%">
     <tr>
             <td style="width: 170px" class="repeat-headers">Description</td>
@@ -410,8 +430,10 @@
 </div>
 
 <div class="sheet-tab-content sheet-tab4">
+<br />
 
-<h2>Combat</h2>
+<strong>Combat</strong>
+
 <table width="100%">
 
 	<table border="1" width="100%">
@@ -481,6 +503,7 @@
 		<td class="repeat-headers">AC-Rear</td>
 		<td class="repeat-headers">AC-Shieldless</td>
 		<td class="repeat-headers">Move Rate</td>
+		<td class="repeat-headers">Attack Multiplier</td>
 	</tr>	
 	<tr>
 		<td class="repeat-tds"><input class="textinput-number" type="number" value="6" min="1" name="attr_HP" /></td>
@@ -489,11 +512,13 @@
 		<td class="repeat-tds"><input class="textinput-number" type="number" value="10" min="-20" max="10" name="attr_AC-Rear" /></td>
 		<td class="repeat-tds"><input class="textinput-number" type="number" value="10" min="-20" max="10" name="attr_AC-Shieldless" /></td>
 		<td class="repeat-tds"><input class="textinput-number" type="number" value="12" min="1" name="attr_MOVE" /></td>
+		<td class="repeat-tds"><input class="textinput-number" type="text" value="" name="attr_ATK_MULTIPLIER" /></td>
 	</tr>
 	</table>
 </table>
 
-<h2>Attacks</h2>
+<strong>Attacks</strong>
+
 <fieldset class="repeating_attacks">
 <table class="enclose" border="5" width="100%">
 <tr class="enclose" align="center"><td class="enclose">
@@ -643,59 +668,358 @@
 </div>
 
 <div class="sheet-tab-content sheet-tab5">
-    <h2>Spells</h2>
-<fieldset name="repeating_spells" class="repeating_spells">
-<table class="repeat-table-style" width="100%">
-	<tr>
-		<td bgcolor="#663300" align="center" colspan="6" class="repeat-tds"><input class="textinput-normal" readonly="true" name="attr_spell_name"/></td>
-	</tr>
-    <tr>
-            <td style="width: 170px" class="repeat-headers">Name</td>
-            <td style="width: 60px" class="repeat-headers">Level</td>
-            <td style="width: 130px" class="repeat-headers">Cast Time</td>
-            <td style="width: 130px" class="repeat-headers">School</td>
-            <td style="width: 130px" class="repeat-headers">Sphere</td>
-            <td style="width: 130px" class="repeat-headers">Range</td>
-    </tr>
-    <tr>
-            <td class="repeat-tds" style="width: 170px" ><input class="textinput-normal" type="text" value="New Spell" name="attr_spell_name"/></td>
-            <td class="repeat-tds" style="width: 60px" ><input class="textinput-number" type="number" value="1" min="0" max="9" name="attr_spell_level" /></td>
-            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="1" name="attr_spell_casttime"/></td>
-            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="Abjuration" name="attr_spell_school"/></td>
-            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="NA" name="attr_spell_sphere"/></td>
-            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="60ft a level" name="attr_spell_range"/></td>
-    </tr>
-	<tr>
-            <td style="width: 130px" class="repeat-headers">Duration</td>
-            <td style="width: 130px" class="repeat-headers">Area of Effect</td>
-            <td style="width: 130px" class="repeat-headers">Components</td>
-            <td style="width: 130px" class="repeat-headers">Save</td>
-            <td style="width: 130px" class="repeat-headers">Reversable</td>
-	</tr>
-	<tr>
-	            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="Instant" name="attr_spell_duration"/></td>
-            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="30ft radius" name="attr_spell_aoe"/></td>
-            <td class="repeat-tds" style="width: 130px" >
-				Verbal<input type='checkbox' name='attr_spell_verbal' value='1' checked='true' />	            
-				Somatic<input type='checkbox' name='attr_spell_somatic' value='1' checked='true' />	            
-				Material<input type='checkbox' name='attr_spell_material' value='1' checked='true' />	            
-            </td>
-            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="For half damage" name="attr_spell_save"/></td>
-            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type='checkbox' name='attr_spell_reversable' value='1' checked='true' /></td>
+<br />
 
-	</tr>
-    <tr>
-    	 <td  colspan="6" class="repeat-tds"><textarea name="attr_spell_desc">Description:</textarea></td>
-    </tr>
-		<td bgcolor="#663300" align="center" colspan="6" class="repeat-tds"></td>
-</table>
-</fieldset>
+	<div>
+		<input type="checkbox" name="attr_hide_spells" class="hideoption"" /><strong>Spells</strong>
+		<div class="hidebody">
+
+<table width="100%">
+<tr>
+<td>
+		 
+		 		 <table class="repeat-table-style" width="100%">
+		 <tr>
+			 <td align="center" colspan="12" style="height: 5px; background:teal; color:white; font-style:bold;">Arcane Spell Slots</td>
+		 </tr>
+		 <tr>
+		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">Level</td>
+		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">0</td>
+		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">1</td>
+		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">2</td>
+		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">3</td>
+		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">4</td>
+		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">5</td>
+		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">6</td>
+		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">7</td>
+		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">8</td>
+		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">9</td>
+		 </tr>
+		 
+		 <tr>
+		 	<td class="spellslot-headers" style="font-style:bold; color:maroon;">Slot</td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base0}+@{spell_arcane_race0}+@{spell_arcane_class0}+@{spell_arcane_level0}+@{spell_arcane_other0}" name="attr_spell_arcane_total0"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base1}+@{spell_arcane_race1}+@{spell_arcane_class1}+@{spell_arcane_level1}+@{spell_arcane_other1}" name="attr_spell_arcane_total1"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base2}+@{spell_arcane_race2}+@{spell_arcane_class2}+@{spell_arcane_level2}+@{spell_arcane_other2}" name="attr_spell_arcane_total2"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base3}+@{spell_arcane_race3}+@{spell_arcane_class3}+@{spell_arcane_level3}+@{spell_arcane_other3}" name="attr_spell_arcane_total3"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base4}+@{spell_arcane_race4}+@{spell_arcane_class4}+@{spell_arcane_level4}+@{spell_arcane_other4}" name="attr_spell_arcane_total4"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base5}+@{spell_arcane_race5}+@{spell_arcane_class5}+@{spell_arcane_level5}+@{spell_arcane_other5}" name="attr_spell_arcane_total5"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base6}+@{spell_arcane_race6}+@{spell_arcane_class6}+@{spell_arcane_level6}+@{spell_arcane_other6}" name="attr_spell_arcane_total6"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base7}+@{spell_arcane_race7}+@{spell_arcane_class7}+@{spell_arcane_level7}+@{spell_arcane_other7}" name="attr_spell_arcane_total7"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base8}+@{spell_arcane_race8}+@{spell_arcane_class8}+@{spell_arcane_level8}+@{spell_arcane_other8}" name="attr_spell_arcane_total8"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base9}+@{spell_arcane_race9}+@{spell_arcane_class9}+@{spell_arcane_level9}+@{spell_arcane_other9}" name="attr_spell_arcane_total9"/></td>
+		 </tr>
+		 </table>
+</td>
+<td>
+		 <table class="repeat-table-style" width="100%">
+		 <tr>
+			 <td align="center" colspan="12" style="height: 5px; background:navy; color:white; font-style:bold;">Divine Spell Slots</td>
+		 </tr>
+		 <tr>
+		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">Level</td>
+		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">0</td>
+		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">1</td>
+		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">2</td>
+		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">3</td>
+		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">4</td>
+		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">5</td>
+		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">6</td>
+		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">7</td>
+		 </tr>
+		 
+		 <tr>
+		 	<td class="spellslot-headers" style="font-style:bold; color:maroon;">Slot</td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base0}+@{spell_divine_race0}+@{spell_divine_class0}+@{spell_divine_level0}+@{spell_divine_other0}" name="attr_spell_divine_total0"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base1}+@{spell_divine_race1}+@{spell_divine_class1}+@{spell_divine_level1}+@{spell_divine_other1}" name="attr_spell_divine_total1"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base2}+@{spell_divine_race2}+@{spell_divine_class2}+@{spell_divine_level2}+@{spell_divine_other2}" name="attr_spell_divine_total2"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base3}+@{spell_divine_race3}+@{spell_divine_class3}+@{spell_divine_level3}+@{spell_divine_other3}" name="attr_spell_divine_total3"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base4}+@{spell_divine_race4}+@{spell_divine_class4}+@{spell_divine_level4}+@{spell_divine_other4}" name="attr_spell_divine_total4"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base5}+@{spell_divine_race5}+@{spell_divine_class5}+@{spell_divine_level5}+@{spell_divine_other5}" name="attr_spell_divine_total5"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base6}+@{spell_divine_race6}+@{spell_divine_class6}+@{spell_divine_level6}+@{spell_divine_other6}" name="attr_spell_divine_total6"/></td>
+		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base7}+@{spell_divine_race7}+@{spell_divine_class7}+@{spell_divine_level7}+@{spell_divine_other7}" name="attr_spell_divine_total7"/></td>
+		 </tr>
+		 </table>
+		 
+</td></tr>		 
+ <tr>
+	 <td align="center" colspan="10" style="height: 5px; background:black;"></td>
+ </tr>
+</table>		    
+
+		    
+		<fieldset name="repeating_spells" class="repeating_spells">
+		<table class="repeat-table-style" width="100%">
+			<tr>
+				<td style="background:#663300; color:white; font-style:bold;" align="center" colspan="6" class="repeat-tds">
+					Memorize#
+					<input class="textinput-number" type="number" min="0" style="width:50px; background: #996600; color:yellow; font-style:bold; " value="0" name="attr_spell_memcount"/>
+					<input class="textinput-normal" style="background:#663300; color:white; text-align:center; " readonly="true" name="attr_spell_name"/>
+					<button type="roll" class ="sheet-blank-roll-button" name="roll_spell_cast" value="&{template:default} {{name=@{spell_name} }} {{Range=@{spell_range} }} {{Duration=@{spell_duration} }} {{Save=@{spell_save} }} {{Area=@{spell_aoe} }} {{Cast Time=@{spell_casttime} }} ?{Show Spell Description|No,|Yes,{{Effect=@{spell_desc} }}} {{Reminder=*Remove one memorized #!* }}">Cast</button>
+				</td>
+			</tr>
+		    <tr>
+		            <td class="repeat-headers">Name</td>
+		            <td class="repeat-headers">School</td>
+		            <td class="repeat-headers">Cast Time</td>
+		            <td class="repeat-headers">Level</td>
+		            <td class="repeat-headers">Sphere</td>
+		            <td class="repeat-headers">Range</td>
+		    </tr>
+		    <tr>
+		            <td class="repeat-tds" style="width: 170px" ><input class="textinput-normal" type="text" value="New Spell" name="attr_spell_name"/></td>
+		            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="Abjuration" name="attr_spell_school"/></td>
+		            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="1" name="attr_spell_casttime"/></td>
+		            <td class="repeat-tds" style="width: 30px" ><input class="textinput-number" type="number" value="1" min="0" max="9" name="attr_spell_level" /></td>
+		            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="NA" name="attr_spell_sphere"/></td>
+		            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="60ft a level" name="attr_spell_range"/></td>
+		    </tr>
+			<tr>
+		            <td class="repeat-headers">Duration</td>
+		            <td class="repeat-headers">Area of Effect</td>
+		            <td class="repeat-headers">Save</td>
+		            <td class="repeat-headers">Reversable</td>
+		            <td class="repeat-headers" colspan="2">Components</td>
+			</tr>
+			<tr>
+			            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="Instant" name="attr_spell_duration"/></td>
+		            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="30ft radius" name="attr_spell_aoe"/></td>
+		            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="For half damage" name="attr_spell_save"/></td>
+		            <td class="repeat-tds" style="width: 30px" ><input class="textinput-short" type='checkbox' name='attr_spell_reversable' value='1' checked='true' /></td>
+		            <td class="repeat-tds" colspan="2" align="center" >
+		            <table width="100%">
+						<td>Verbal<input type='checkbox' name='attr_spell_verbal' value='1' checked='true' /></td>
+						<td>Somatic<input type='checkbox' name='attr_spell_somatic' value='1' checked='true' /></td>
+						<td>Material<input type='checkbox' name='attr_spell_material' value='1' checked='true' /></td>
+					</table>
+		            </td>
+		
+			</tr>
+		    <tr >
+		    	 <td  colspan="6" class="repeat-tds"><textarea  name="attr_spell_desc">Description:</textarea></td>
+		    </tr>
+				<td align="center" colspan="6" class="repeat-tds" style="height: 5px; background:black;"> </td>
+		</table>
+		</fieldset>
+		
+		 <table class="repeat-table-style" border="1" width="100%">
+		 <tr>
+			 <td align="center" colspan="10" style="height: 5px; background:teal; color:white; font-style:bold;">Arcane Spell Slots</td>
+		 </tr>
+
+		 <tr style="background:orange;">
+		 	<td class="repeat-headers" style="font-style:bold;">-</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Base</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Race</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Class</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Level</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Other</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Total</td>
+		 </tr>
+		 <tr>
+		 	<td class="repeat-headers" style="font-style:bold;">Level 0</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base0}+@{spell_arcane_race0}+@{spell_arcane_class0}+@{spell_arcane_level0}+@{spell_arcane_other0}" name="attr_spell_arcane_total0"/></td>
+		 </tr>
+
+		 <tr style="background:#FFCC00;">
+		 	<td class="repeat-headers" style="font-style:bold;">Level 1</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base1}+@{spell_arcane_race1}+@{spell_arcane_class1}+@{spell_arcane_level1}+@{spell_arcane_other1}" name="attr_spell_arcane_total1"/></td>
+		 </tr>
+		 <tr>
+		 	<td class="repeat-headers" style="font-style:bold;">Level 2</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base2}+@{spell_arcane_race2}+@{spell_arcane_class2}+@{spell_arcane_level2}+@{spell_arcane_other2}" name="attr_spell_arcane_total2"/></td>
+		 </tr>
+		 <tr style="background:#FFCC00;">
+		 	<td class="repeat-headers" style="font-style:bold;">Level 3</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base3}+@{spell_arcane_race3}+@{spell_arcane_class3}+@{spell_arcane_level3}+@{spell_arcane_other3}" name="attr_spell_arcane_total3"/></td>
+		 </tr>
+		 <tr>
+		 	<td class="repeat-headers" style="font-style:bold;">Level 4</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base4}+@{spell_arcane_race4}+@{spell_arcane_class4}+@{spell_arcane_level4}+@{spell_arcane_other4}" name="attr_spell_arcane_total4"/></td>
+		 </tr>
+		 <tr style="background:#FFCC00;">
+		 	<td class="repeat-headers" style="font-style:bold;">Level 5</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base5}+@{spell_arcane_race5}+@{spell_arcane_class5}+@{spell_arcane_level5}+@{spell_arcane_other5}" name="attr_spell_arcane_total5"/></td>
+		 </tr>
+		 <tr>
+		 	<td class="repeat-headers" style="font-style:bold;">Level 6</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base6}+@{spell_arcane_race6}+@{spell_arcane_class6}+@{spell_arcane_level6}+@{spell_arcane_other6}" name="attr_spell_arcane_total6"/></td>
+		 </tr>
+		 <tr style="background:#FFCC00;">
+		 	<td class="repeat-headers" style="font-style:bold;">Level 7</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base7}+@{spell_arcane_race7}+@{spell_arcane_class7}+@{spell_arcane_level7}+@{spell_arcane_other7}" name="attr_spell_arcane_total7"/></td>
+		 </tr>
+		 <tr>
+		 	<td class="repeat-headers" style="font-style:bold;">Level 8</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base8"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race8"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class8"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level8"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other8"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base8}+@{spell_arcane_race8}+@{spell_arcane_class8}+@{spell_arcane_level8}+@{spell_arcane_other8}" name="attr_spell_arcane_total8"/></td>
+		 </tr>
+		 <tr style="background:#FFCC00;">
+		 	<td class="repeat-headers" style="font-style:bold;">Level 9</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base9"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race9"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class9"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level9"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other9"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base9}+@{spell_arcane_race9}+@{spell_arcane_class9}+@{spell_arcane_level9}+@{spell_arcane_other9}" name="attr_spell_arcane_total9"/></td>
+		 </tr>
+
+
+		 <tr>
+			 <td align="center" colspan="10" style="height: 5px; background:black;"></td>
+		 </tr>
+		 </table>
+		
+		 <table class="repeat-table-style" border="1" width="100%">
+		 <tr>
+ 			 <td align="center" colspan="10" style="height: 5px; background:navy; color:white; font-style:bold;">Divine Spell Slots</td>
+		 </tr>
+
+		 <tr style="background:orange;">
+		 	<td class="repeat-headers" style="font-style:bold;">-</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Base</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Race</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Class</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Level</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Other</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Total</td>
+		 </tr>
+		 <tr>
+		 	<td class="repeat-headers" style="font-style:bold;">Level 0</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base0}+@{spell_divine_race0}+@{spell_divine_class0}+@{spell_divine_level0}+@{spell_divine_other0}" name="attr_spell_divine_total0"/></td>
+		 </tr>
+
+		 <tr style="background:#FFCC00;">
+		 	<td class="repeat-headers" style="font-style:bold;">Level 1</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base1}+@{spell_divine_race1}+@{spell_divine_class1}+@{spell_divine_level1}+@{spell_divine_other1}" name="attr_spell_divine_total1"/></td>
+		 </tr>
+		 <tr>
+		 	<td class="repeat-headers" style="font-style:bold;">Level 2</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base2}+@{spell_divine_race2}+@{spell_divine_class2}+@{spell_divine_level2}+@{spell_divine_other2}" name="attr_spell_divine_total2"/></td>
+		 </tr>
+		 <tr style="background:#FFCC00;">
+		 	<td class="repeat-headers" style="font-style:bold;">Level 3</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base3}+@{spell_divine_race3}+@{spell_divine_class3}+@{spell_divine_level3}+@{spell_divine_other3}" name="attr_spell_divine_total3"/></td>
+		 </tr>
+		 <tr>
+		 	<td class="repeat-headers" style="font-style:bold;">Level 4</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base4}+@{spell_divine_race4}+@{spell_divine_class4}+@{spell_divine_level4}+@{spell_divine_other4}" name="attr_spell_divine_total4"/></td>
+		 </tr>
+		 <tr style="background:#FFCC00;">
+		 	<td class="repeat-headers" style="font-style:bold;">Level 5</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base5}+@{spell_divine_race5}+@{spell_divine_class5}+@{spell_divine_level5}+@{spell_divine_other5}" name="attr_spell_divine_total5"/></td>
+		 </tr>
+		 <tr>
+		 	<td class="repeat-headers" style="font-style:bold;">Level 6</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base6}+@{spell_divine_race6}+@{spell_divine_class6}+@{spell_divine_level6}+@{spell_divine_other6}" name="attr_spell_divine_total6"/></td>
+		 </tr>
+		 <tr style="background:#FFCC00;">
+		 	<td class="repeat-headers" style="font-style:bold;">Level 7</td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base7}+@{spell_divine_race7}+@{spell_divine_class7}+@{spell_divine_level7}+@{spell_divine_other7}" name="attr_spell_divine_total7"/></td>
+		 </tr>
+
+
+		 <tr>
+			 <td align="center" colspan="10" style="height: 5px; background:black;"></td>
+		 </tr>
+		 </table>
+
+		
+		</div>
+	</div>
 
 
 </div>
 
 <div class="sheet-tab-content sheet-tab6">
-    <h2>Saves</h2>
+<br />
+
+    <strong>Saves</strong>
+
 	<table class="repeat-table-style" width="100%">
 	<tr>
 		<td style="width: 70px" class="repeat-headers"></td>
@@ -727,22 +1051,28 @@
 </div>
 
 <div class="sheet-tab-content sheet-tab7">
-<h2>Notes</h2>
+<br />
+
+<strong>Notes</strong>
+
 <fieldset class="repeating_notes">
 <table class="enclose" border="5" width="100%">
 <tr class="enclose" align="center"><td class="enclose">
-	<input class="auto-style2" type="text"  value="New Note" name="attr_notes_name" style="width: 200px"  /></td></tr>
-
-<tr><td class="enclose">
-<table class="repeat-table-style" width="100%">
-<tr bgcolor="orange">
-     <td  class="repeat-tds">
-	     <textarea name="attr_notes_text"></textarea>
-     </td>
-</tr>
-</table>
-
-</td></tr>
+	<input type="checkbox" name="attr_notes_hidewindow" class="hideoption" /><input class="auto-style2" type="text"  value="New Note" name="attr_notes_name" style="width: 200px"  /></td></tr>
+	<div class="hidebody">
+		<tr>
+		<td class="enclose">
+		<table class="repeat-table-style" width="100%">
+		<tr bgcolor="orange">
+		     <td  class="repeat-tds">
+			     <textarea name="attr_notes_text"></textarea>
+		     </td>
+		</tr>
+		</table>
+		
+		</td>
+		</tr>
+	</div>
 </table>
 
 </fieldset> 
