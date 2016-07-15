@@ -687,7 +687,7 @@
 <br />
 
 	<div>
-		<input type="checkbox" name="attr_hide_spells" class="hideoption"" /><strong>Spells</strong>
+		<input type="checkbox" name="attr_hide_spells" class="hideoption" /><strong>Spells</strong>
 		<div class="hidebody">
 
 <table width="100%">
@@ -1071,25 +1071,19 @@
 
 <strong>Notes</strong>
 
-<fieldset class="repeating_notes">
-<table class="enclose" border="5" width="100%">
-<tr class="enclose" align="center"><td class="enclose">
-	<input type="checkbox" name="attr_notes_hidewindow" class="hideoption" /><input class="auto-style2" type="text"  value="New Note" name="attr_notes_name" style="width: 200px"  /></td></tr>
-	<div class="hidebody">
-		<tr>
-		<td class="enclose">
-		<table class="repeat-table-style" width="100%">
-		<tr bgcolor="orange">
-		     <td  class="repeat-tds">
-			     <textarea name="attr_notes_text"></textarea>
-		     </td>
-		</tr>
-		</table>
-		
-		</td>
-		</tr>
+<fieldset class="repeating_notes" style="width:100%;">
+	<div class='sheet-col' style="width:100%; background:navy; text-align:center; color:white;">
+		<table align="center" width="100%"><input type="checkbox" name="attr_notes_hidewindow" class="hideoption" /><input type="text"  value="New Note" name="attr_notes_name" style="width: 200px"  /></table>
+		<div class="hidebody"style="width:100%;">
+			<table class="repeat-table-style" width="100%">
+			<tr bgcolor="orange">
+			     <td  class="repeat-tds"><textarea name="attr_notes_text"></textarea></td>
+			</tr>
+			</table>
+		</div>
 	</div>
-</table>
+	<div class='sheet-col' align="center" style="width:100%; background:#996600; height:15px;">
+	</div>
 
 </fieldset> 
 
