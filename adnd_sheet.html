@@ -26,7 +26,7 @@
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab7" value="7" title="Notes" />
 
 <div class="sheet-tab-content sheet-tab1">
-    
+<br />
 <table style="width: 100%;padding:1px 1px 1px 1px;" border="1" cellpadding="1" cellspacing="1" class="auto-style2">
 	<tr bgcolor="#FFCC00">
 		<td style="width: 236px"><strong>Name</strong></td>
@@ -105,9 +105,10 @@
 
 <table border="1" style="width: 100%" class="auto-style1" align="left">
 	<tr bgcolor="#FFCC00">
-		<td>
+		<td style="width:65px" align="center">
+
 		<input type="number" name="attr_character_strength" class="textinput-numberpercent" value="10" min="-25" max="25" /></td>
-		<td align="center">
+		<td align="center" style="width:120px">
 		<button style="width:120px" class ="sheet-blank-roll-button" type="roll" name="roll_stregth_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_strength} Strength}} {{Result=[[@{character_strength}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Strength</button></td>
 		<td>
 		<table width="100%" style="float:left;">
@@ -133,9 +134,11 @@
 		</td>
 	</tr>
 	<tr bgcolor="#FFCC99">
-		<td>
+		<td style="width:65px" align="center">
+
+
 		<input type="number" name="attr_character_intelligence" class="textinput-numberpercent" value="10" min="-25" max="25" /></td>
-		<td align="center">
+		<td align="center" style="width:120px">
 		<button style="width:120px" class ="sheet-blank-roll-button" type="roll" name="roll_intelligence_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_intelligence} Intelligence}} {{Result=[[@{character_intelligence}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Intelligence</button>
 		</td>
 		<td>
@@ -155,13 +158,17 @@
 				<td class="width80">max spells</td>
 				<td class="width80">
 		<input type="text" name="attr_character_int_maxspells" style="width: 28px" value="0" size="3" /></td>
+		<td class="width80"></td>
+		<td class="width80"></td>
 		</table>
 </td>
 	</tr>
 	<tr bgcolor="#FFCC00">
-		<td>
+		<td style="width:65px" align="center">
+
+
 		<input type="number" name="attr_character_wisdom" class="textinput-numberpercent" value="10" min="-25" max="25" /></td>
-		<td align="center">
+		<td align="center" style="width:120px">
 		<button style="width:120px" class ="sheet-blank-roll-button" type="roll" name="roll_wisdom_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_wisdom} Wisdom}} {{Result=[[@{character_wisdom}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Wisdom</button>
 		</td>
 		<td>
@@ -178,13 +185,19 @@
 				<td class="width80">bonus spells</td>
 				<td class="width80">
 		<input type="text" name="attr_character_wis_bonus" style="width: 132px" value="0" /></td>
+		<td class="width80"></td>
+		<td class="width80"></td>
+		<td class="width80"></td>
+		<td class="width80"></td>
 		</table>
 </td>
 	</tr>
 	<tr bgcolor="#FFCC99">
-		<td>
+		<td style="width:65px" align="center">
+
+
 		<input type="number" name="attr_character_dexterity" class="textinput-numberpercent" value="10" min="-25" max="25" /></td>
-		<td align="center">
+		<td align="center" style="width:120px">
 		<button style="width:120px" class ="sheet-blank-roll-button" type="roll" name="roll_dexterity_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_dexterity} Dexterity}} {{Result=[[@{character_dexterity}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Dexterity</button>
 		</td>
 		<td>
@@ -201,13 +214,19 @@
 				<td class="width80">defense adj.</td>
 				<td class="width80">
 		<input type="text" name="attr_character_dex_defense" style="width: 28px" value="0" size="4" /></td>
+		<td class="width80"></td>
+		<td class="width80"></td>
+		<td class="width80"></td>
+		<td class="width80"></td>
 		</table>
 </td>
 	</tr>
 	<tr bgcolor="#FFCC00">
-		<td>
+		<td style="width:65px" align="center">
+
+
 		<input type="number" name="attr_character_constitution" class="textinput-numberpercent" value="10" min="-25" max="25" /></td>
-		<td align="center">
+		<td align="center" style="width:120px">
 		<button style="width:120px" class ="sheet-blank-roll-button" type="roll" name="roll_constition_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_constitution} Constitution}} {{Result=[[@{character_constitution}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Constitution</button>
 		</td>
 		<td>
@@ -227,13 +246,17 @@
 				<td class="width80">regeneration</td>
 				<td class="width80">
 		<input type="text" name="attr_character_con_regen" style="width: 28px" value="0" size="3" /></td>
+		<td class="width80"></td>
+		<td class="width80"></td>
 		</table>
 </td>
 	</tr>
 	<tr bgcolor="#FFCC99">
-		<td>
+		<td style="width:65px" align="center">
+
+
 		<input type="number" name="attr_character_charisma" class="textinput-numberpercent" value="10" min="-25" max="25" /></td>
-		<td align="center">
+		<td align="center" style="width:120px">
 		<button style="width:120px" class ="sheet-blank-roll-button" type="roll" name="roll_charisma_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_charisma} Charisma}} {{Result=[[@{character_charisma}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Charisma</button>
 		</td>
 		<td>
@@ -250,6 +273,10 @@
 				<td class="width80">reaction&nbsp; adj.</td>
 				<td class="width80">
 		<input type="text" name="attr_character_chr_reaction" style="width: 28px" value="0" size="3" /></td>
+		<td class="width80"></td>
+		<td class="width80"></td>
+		<td class="width80"></td>
+		<td class="width80"></td>
 		</table>
 </td>
 	</tr>
@@ -434,7 +461,7 @@
     <tr>
             <td style="width: 170px" class="repeat-headers">Description</td>
             <td style="width: 75px" class="repeat-headers">Weight</td>
-            <td style="width: 60px" class="repeat-headers">Count</td>
+            <td style="width: 110px" class="repeat-headers">Count</td>
             <td style="width: 130px" class="repeat-headers">Location</td>
             <td style="width: 130px" class="repeat-headers">Collective Weight</td>
     </tr>
@@ -446,7 +473,7 @@
     <tr>
             <td class="repeat-tds" style="width: 170px" ><input class="textinput-normal" type="text" value="New Gear" name="attr_eq_desc"/></td>
             <td class="repeat-tds" style="width: 75px" ><input class="textinput-bignumber" type="number" value="0.0" step="0.1" min="0" name="attr_eq_weight" /></td>
-            <td class="repeat-tds" style="width: 60px" ><input class="textinput-number" type="number" value="1" name="attr_eq_count"/></td>
+            <td class="repeat-tds" style="width: 110px" ><input class="textinput-numberlarge" type="number" value="1" name="attr_eq_count"/></td>
             <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="Carried" name="attr_eq_location"/></td>
         	<td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" disabled="true" value="@{eq_count}*@{eq_weight}" name="attr_eq_itemtotal" /></td>
     </tr>
@@ -547,142 +574,136 @@
 <strong>Attacks</strong>
 
 <fieldset class="repeating_attacks">
-<table class="enclose" border="5" width="100%">
-<tr class="enclose" align="center">
-	<td class="enclose" style="background:#663300; height: 24px;">
+<div  class="enclose" style="background:#663300;" align="center">
+		<input type="checkbox" name="attr_notes_hidewindow" class="hideoption" style="vertical-align:middle; text-align:center; float:none; " />
 	   	<button class="sheet-attack-buttons" style="width:75px;" type="roll" name="roll_attack_check" value="?{Send to|Everyone,|GM-Only,/w GM} &{template:default} {{name=@{character_name} attacks with @{atk_name} }} {{hit AC=[[@{THACO}-(1d20+(@{atk_modifier_total_hit}+?{Situational Hit Modifier|0}))]] }} {{ Damage=[[@{atk_dmg}+@{atk_modifier_total_dmg}]] (S/M), [[@{atk_ldmg}+@{atk_modifier_total_dmg}]] (L) }} {{Type=@{atk_dmg_type} }} {{Range=@{atk_range} }}">Attack</button>
 		<input readonly="true" class="auto-style2" style="width: 200px; -webkit-border-radius: 28;-moz-border-radius: 28;border-radius: 28px; background:#996633; color:white; font-style:bold; border:none; text-align:center;" type="text"  name="attr_atk_name"  />
 	   	<button class="sheet-attack-buttons" style="width:75px;" type="roll" name="roll_attack_init" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=@{character_name} rolls initiative with @{atk_name} }} {{Initiative=[[1d10+(@{atk_speedfactor}+?{Situational Initiative Modifier|0})&{tracker}]] }}">Initiative</button>
-   	</td>
-</tr>
 
-<tr><td class="enclose">
-<table class="repeat-table-style" width="100%">
-	<tr>
-     <td class="repeat-headers"  style="width: 170px">Name</td>
-     <td class="repeat-headers"  style="width: 65px">S/M Dmg</td>
-     <td class="repeat-headers"  style="width: 65px">Large Dmg</td>
-     <td class="repeat-headers"  style="width: 125px">Range</td>
-     <td class="repeat-headers"  style="width: 72px">Speed Factor</td>
-     <td class="repeat-headers"  style="width: 90px">Type Damage</td>
-	</tr>
-<tr bgcolor="orange">
-     <td  class="repeat-tds" style="width: 170px; height: 30px;">
-		<input class="textinput-normal" value="New Attack" type="text" name="attr_atk_name" />        
-     </td>
-     
-     <td  class="repeat-tds" style="width: 65px; height: 30px;">
-		<input class="textinput-short60" value="1d8" type="text" name="attr_atk_dmg" />        
-     </td>
+	<div class="hidebody"style="width:100%;">
 
-     <td  class="repeat-tds" style="width: 65px; height: 30px;">
-		<input class="textinput-short60" value="1d12" type="text" name="attr_atk_ldmg" />        
-     </td>
+		<table class="repeat-table-style" width="100%">
+		<tr style="background:#ffcc00">
+		     <td class="repeat-headers"  style="width: 170px">Name</td>
+		     <td class="repeat-headers"  style="width: 65px">S/M Dmg</td>
+		     <td class="repeat-headers"  style="width: 65px">Large Dmg</td>
+		     <td class="repeat-headers"  style="width: 125px">Range</td>
+		     <td class="repeat-headers"  style="width: 72px">Speed Factor</td>
+		     <td class="repeat-headers"  style="width: 90px">Type Damage</td>
+			</tr>
+		<tr bgcolor="orange">
+		     <td  class="repeat-tds" style="width: 170px; height: 30px;">
+				<input class="textinput-normal" value="New Attack" type="text" name="attr_atk_name" />        
+		     </td>
+		     
+		     <td  class="repeat-tds" style="width: 65px; height: 30px;">
+				<input class="textinput-short60" value="1d8" type="text" name="attr_atk_dmg" />        
+		     </td>
+		
+		     <td  class="repeat-tds" style="width: 65px; height: 30px;">
+				<input class="textinput-short60" value="1d12" type="text" name="attr_atk_ldmg" />        
+		     </td>
+		
+		     <td  class="repeat-tds" style="width: 125px; height: 30px;">
+				<input class="textinput-short" value="NA" type="text" name="attr_atk_range" />        
+		     </td>
+		
+		     <td class="repeat-tds"  style="width: 72px; height: 30px;">
+			     <input class="textinput-number" type="number" value="1" name="attr_atk_speedfactor" />
+			 </td>
+		
+		     <td class="repeat-tds"  style="width: 90px; height: 30px;">
+		     <select class="select-normal" name="attr_atk_dmg_type">                
+		          <option value="Blunt">Blunt</option>
+		          <option value="Piercing">Piercing</option>
+		          <option value="Slashing" selected="selected" >Slashing</option>
+		          <option value="other">Other</option>
+		      </select></td>
+		</tr>
+		</table>
+		
+		<table class="repeat-table-style" width="100%">
+		<tr style="background:#ffcc00">
+		     <td class="repeat-headers"  style="width: 90px"></td>
+		     <td class="repeat-headers"  style="width: 90px">Ability Base</td>
+		     <td class="repeat-headers"  style="width: 72px">Ability Modifier</td>
+		     <td class="repeat-headers"  style="width: 72px">Weapon Modifier</td>
+		     <td class="repeat-headers"  style="width: 72px">Race Modifier</td>
+		     <td class="repeat-headers"  style="width: 72px">Prof Modifier</td>
+		     <td class="repeat-headers"  style="width: 72px">Other Modifier</td>
+		     <td class="repeat-headers"  style="width: 72px">Total Modifier</td>
+		     <td class="repeat-headers"  style="width: 90px"></td>
+		</tr>
+		
+		<tr style="background:orange;">
+		     <td style="width: 90px; color:black; ">To Hit</td>
+		
+		     <td class="repeat-tds"  style="width: 90px">
+		     <select class="select-normal" name="attr_atk_hit_ability" class="atk-ability">                
+		          <option value="0">None</option>
+		          <option selected="selected" value="[[@{character_str_hit}]]">STR</option>
+		          <option value="[[@{character_dex_missile}]]">DEX</option>
+		      </select></td>
+		      
+		     <td class="repeat-tds"  style="width: 72px">
+			     <input disabled="true" class="textinput-number" type="text" value="@{atk_hit_ability}" name="attr_atk_modifier_ability_hit" />
+			 </td>
+			 
+		     <td class="repeat-tds"  style="width: 72px">
+			     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_weapon_hit" />
+			 </td>
+		     <td class="repeat-tds"  style="width: 72px">
+			     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_race_hit" />
+			 </td>
+			 
+		     <td class="repeat-tds"  style="width: 72px">
+			     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_prof_hit" />
+			 </td>
+		     <td class="repeat-tds"  style="width: 72px">
+			     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_other_hit" />
+			 </td>
+		     <td class="repeat-tds"  style="width: 72px">
+			     <input disabled="true" class="textinput-number" type="text"  name="attr_atk_modifier_total_hit" value="@{atk_modifier_ability_hit}+@{atk_modifier_weapon_hit}+@{atk_modifier_race_hit}+@{atk_modifier_prof_hit}+@{atk_modifier_other_hit}" />
+			 </td>
+			      <td style="width: 90px; color:black">To Hit</td>
+		</tr>
+		<tr style="background:#996633;" >
+		     <td style="width: 90px; color:white">To Damage</td>
+		
+		     <td class="repeat-tds"  style="width: 90px">
+		     <select class="select-normal" name="attr_atk_dmg_ability" class="atk-ability">                
+		          <option value="0">None</option>
+		          <option selected="selected" value="[[@{character_str_dmg}]]">STR</option>
+		      </select></td>
+		
+		     <td class="repeat-tds"  style="width: 72px">
+			     <input disabled="true" class="textinput-number" type="text" value="@{atk_dmg_ability}" name="attr_atk_modifier_ability_dmg" />
+			 </td>
+			 
+		     <td class="repeat-tds"  style="width: 72px">
+			     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_weapon_dmg" />
+			 </td>
+		     <td class="repeat-tds"  style="width: 72px">
+			     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_race_dmg" />
+			 </td>
+		     <td class="repeat-tds"  style="width: 72px">
+			     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_prof_dmg" />
+			 </td>
+		     <td class="repeat-tds"  style="width: 72px">
+			     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_other_dmg" />
+			 </td>
+		     <td class="repeat-tds"  style="width: 72px">
+			     <input disabled="true" class="textinput-number" type="text"  name="attr_atk_modifier_total_dmg" value="@{atk_modifier_ability_dmg}+@{atk_modifier_weapon_dmg}+@{atk_modifier_race_dmg}+@{atk_modifier_prof_dmg}+@{atk_modifier_other_dmg}" />
+			 </td>
+			      <td style="width: 90px; color:white">To Damage</td>
+			 
+		</tr>
+		</table>
+	</div>
+	<div class='sheet-col' align="center" style="width:100%; background:black; height:15px;">
+	</div>
 
-     <td  class="repeat-tds" style="width: 125px; height: 30px;">
-		<input class="textinput-short" value="NA" type="text" name="attr_atk_range" />        
-     </td>
-
-     <td class="repeat-tds"  style="width: 72px; height: 30px;">
-	     <input class="textinput-number" type="number" value="1" name="attr_atk_speedfactor" />
-	 </td>
-
-     <td class="repeat-tds"  style="width: 90px; height: 30px;">
-     <select class="select-normal" name="attr_atk_dmg_type">                
-          <option value="Blunt">Blunt</option>
-          <option value="Piercing">Piercing</option>
-          <option value="Slashing" selected="selected" >Slashing</option>
-          <option value="other">Other</option>
-      </select></td>
-</tr>
-</table>
-<table class="repeat-table-style" width="100%">
-	<tr>
-     <td class="repeat-headers"  style="width: 90px"></td>
-     <td class="repeat-headers"  style="width: 90px">Ability Base</td>
-     <td class="repeat-headers"  style="width: 72px">Ability Modifier</td>
-     <td class="repeat-headers"  style="width: 72px">Weapon Modifier</td>
-     <td class="repeat-headers"  style="width: 72px">Race Modifier</td>
-     <td class="repeat-headers"  style="width: 72px">Prof Modifier</td>
-     <td class="repeat-headers"  style="width: 72px">Other Modifier</td>
-     <td class="repeat-headers"  style="width: 72px">Total Modifier</td>
-     <td class="repeat-headers"  style="width: 90px"></td>
-	</tr>
-
-<tr bgcolor="#FFCC66">
-     <td style="width: 90px; color:black">To Hit</td>
-
-     <td class="repeat-tds"  style="width: 90px">
-     <select class="select-normal" name="attr_atk_hit_ability" class="atk-ability">                
-          <option value="0">None</option>
-          <option selected="selected" value="[[@{character_str_hit}]]">STR</option>
-          <option value="[[@{character_dex_missile}]]">DEX</option>
-      </select></td>
-      
-     <td class="repeat-tds"  style="width: 72px">
-	     <input disabled="true" class="textinput-number" type="text" value="@{atk_hit_ability}" name="attr_atk_modifier_ability_hit" />
-	 </td>
-	 
-     <td class="repeat-tds"  style="width: 72px">
-	     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_weapon_hit" />
-	 </td>
-     <td class="repeat-tds"  style="width: 72px">
-	     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_race_hit" />
-	 </td>
-	 
-     <td class="repeat-tds"  style="width: 72px">
-	     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_prof_hit" />
-	 </td>
-     <td class="repeat-tds"  style="width: 72px">
-	     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_other_hit" />
-	 </td>
-     <td class="repeat-tds"  style="width: 72px">
-	     <input disabled="true" class="textinput-number" type="text"  name="attr_atk_modifier_total_hit" value="@{atk_modifier_ability_hit}+@{atk_modifier_weapon_hit}+@{atk_modifier_race_hit}+@{atk_modifier_prof_hit}+@{atk_modifier_other_hit}" />
-	 </td>
-	      <td style="width: 90px; color:black">To Hit</td>
-
-</tr>
-<tr bgcolor="#996633">
-     <td style="width: 90px; color:white">To Damage</td>
-
-     <td class="repeat-tds"  style="width: 90px">
-     <select class="select-normal" name="attr_atk_dmg_ability" class="atk-ability">                
-          <option value="0">None</option>
-          <option selected="selected" value="[[@{character_str_dmg}]]">STR</option>
-      </select></td>
-
-     <td class="repeat-tds"  style="width: 72px">
-	     <input disabled="true" class="textinput-number" type="text" value="@{atk_dmg_ability}" name="attr_atk_modifier_ability_dmg" />
-	 </td>
-	 
-     <td class="repeat-tds"  style="width: 72px">
-	     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_weapon_dmg" />
-	 </td>
-     <td class="repeat-tds"  style="width: 72px">
-	     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_race_dmg" />
-	 </td>
-     <td class="repeat-tds"  style="width: 72px">
-	     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_prof_dmg" />
-	 </td>
-     <td class="repeat-tds"  style="width: 72px">
-	     <input class="textinput-number" type="number" value="0" name="attr_atk_modifier_other_dmg" />
-	 </td>
-     <td class="repeat-tds"  style="width: 72px">
-	     <input disabled="true" class="textinput-number" type="text"  name="attr_atk_modifier_total_dmg" value="@{atk_modifier_ability_dmg}+@{atk_modifier_weapon_dmg}+@{atk_modifier_race_dmg}+@{atk_modifier_prof_dmg}+@{atk_modifier_other_dmg}" />
-	 </td>
-	      <td style="width: 90px; color:white">To Damage</td>
-	 
-</tr>
-
-</table>
-
-</td></tr>
-
-<tr class="enclose" align="center">
-	<td style="height: 5px; background:black;">               </td>
-</tr>
-
-</table>
+</div>
 </fieldset> 
 
 <hr />
@@ -770,16 +791,15 @@
 
 		    
 		<fieldset name="repeating_spells" class="repeating_spells">
-		<table class="repeat-table-style" width="100%">
-			<tr>
-				<td style="background:#663300; color:white; font-style:bold;" align="center" colspan="6" class="repeat-tds">
+		<div  class="enclose" style="background:#663300; color:white;" align="center">
+		<input type="checkbox" name="attr_spell_hidewindow" class="hideoption" style="vertical-align:middle; text-align:center; float:none; " />
 					Memorize#
 					<input class="textinput-number" type="number" min="0" style="width:50px; background: #996600; -webkit-border-radius: 28;-moz-border-radius: 28;border-radius: 28px; color:yellow; font-style:bold; " value="0" name="attr_spell_memcount"/>
 					<input class="textinput-normal" style="-webkit-border-radius: 28;-moz-border-radius: 28;border-radius: 28px; background:#996633; color:white; text-align:center; " readonly="true" name="attr_spell_name"/>
 					<button type="roll" class ="sheet-blank-roll-button" style="width:50px" name="roll_spell_cast" value="?{Send to|Everyone,|GM-Only,/w GM} &{template:default} {{name=@{spell_name} }} {{Range=@{spell_range} }} {{Duration=@{spell_duration} }} {{Save=@{spell_save} }} {{Area=@{spell_aoe} }} {{Cast Time=@{spell_casttime} }} ?{Show Spell Description|No,|Yes,{{Effect=@{spell_desc} }}} {{Reminder=*Remove one memorized #!* }}">Cast</button>
-				</td>
-			</tr>
-		    <tr>
+			<div class="hidebody"style="width:100%;">
+			<table width="100%">
+		    <tr style="background:orange;">
 		            <td class="repeat-headers">Name</td>
 		            <td class="repeat-headers">School</td>
 		            <td class="repeat-headers">Cast Time</td>
@@ -787,7 +807,7 @@
 		            <td class="repeat-headers">Sphere</td>
 		            <td class="repeat-headers">Range</td>
 		    </tr>
-		    <tr>
+		    <tr style="background:white;">
 		            <td class="repeat-tds" style="width: 170px" ><input class="textinput-normal" type="text" value="New Spell" name="attr_spell_name"/></td>
 		            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="Abjuration" name="attr_spell_school"/></td>
 		            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="1" name="attr_spell_casttime"/></td>
@@ -795,32 +815,35 @@
 		            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="NA" name="attr_spell_sphere"/></td>
 		            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="60ft a level" name="attr_spell_range"/></td>
 		    </tr>
-			<tr>
+			<tr style="background:orange;">
 		            <td class="repeat-headers">Duration</td>
 		            <td class="repeat-headers">Area of Effect</td>
 		            <td class="repeat-headers">Save</td>
 		            <td class="repeat-headers">Reversable</td>
 		            <td class="repeat-headers" colspan="2">Components</td>
 			</tr>
-			<tr>
-			            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="Instant" name="attr_spell_duration"/></td>
+		    <tr style="background:white; color:black;">
+			        <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="Instant" name="attr_spell_duration"/></td>
 		            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="30ft radius" name="attr_spell_aoe"/></td>
 		            <td class="repeat-tds" style="width: 130px" ><input class="textinput-short" type="text" value="For half damage" name="attr_spell_save"/></td>
 		            <td class="repeat-tds" style="width: 30px" ><input class="textinput-short" type='checkbox' name='attr_spell_reversable' value='1' checked='true' /></td>
 		            <td class="repeat-tds" colspan="2" align="center" >
-		            <table width="100%">
-						<td>Verbal<input type='checkbox' name='attr_spell_verbal' value='1' checked='true' /></td>
-						<td>Somatic<input type='checkbox' name='attr_spell_somatic' value='1' checked='true' /></td>
-						<td>Material<input type='checkbox' name='attr_spell_material' value='1' checked='true' /></td>
+		            <table width="100%" align="center">
+						<td>Verbal:<input type='checkbox' name='attr_spell_verbal' value='1' checked='true' /></td>
+						<td>Somatic:<input type='checkbox' name='attr_spell_somatic' value='1' checked='true' /></td>
+						<td>Material:<input type='checkbox' name='attr_spell_material' value='1' checked='true' /></td>
 					</table>
 		            </td>
 		
 			</tr>
-		    <tr >
+		    <tr style="background:black;">
 		    	 <td  colspan="6" class="repeat-tds"><textarea  name="attr_spell_desc">Description:</textarea></td>
 		    </tr>
-				<td align="center" colspan="6" class="repeat-tds" style="height: 5px; background:black;"> </td>
 		</table>
+		</div>
+		<div class='sheet-col' align="center" style="width:100%; background:black; height:15px;">
+		</div>
+		</div>
 		</fieldset>
 		
 		 <table class="repeat-table-style" border="1" width="100%">

@@ -179,6 +179,12 @@ input[type=number].sheet-textinput-numberpercent {
   border: none;
 }
 
+input[type=number].sheet-textinput-numberlarge {
+  display: inline-block;
+    width:100px;
+  border: none;
+}
+
 
 
 
