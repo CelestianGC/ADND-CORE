@@ -15,6 +15,7 @@ button[type=roll].sheet-attack-buttons {
   font-family: Arial;
   color: #000000;
   font-size: 15px;
+  font-weight:800;
   padding: 5px 5px 5px 5px;
   text-decoration: none;
 }
@@ -49,6 +50,7 @@ button[type=roll]:hover {
   -moz-border-radius: 28;
   border-radius: 28px;
   font-family: Arial;
+  font-weight:800;
   color: #000000;
   font-size: 15px;
   padding: 5px 5px 5px 5px;
@@ -171,6 +173,13 @@ input.sheet-textinput-number45 {
     width:45px;
   border: none;
 }
+input[type=number].sheet-textinput-numberpercent {
+  display: inline-block;
+    width:50px;
+  border: none;
+}
+
+
 
 
 input[type=number].sheet-textinput-shortnumber {
@@ -323,4 +332,8 @@ input.sheet-hideoption:checked ~ div.sheet-hidebody
     display: none;
 }
 
-
+td.sheet-width80 {
+	
+	width:80px;
+	
+}

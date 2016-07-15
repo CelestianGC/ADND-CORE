@@ -103,147 +103,152 @@
 
 </table>
 
-<table border="1" style="width: 100%" class="auto-style1">
+<table border="1" style="width: 100%" class="auto-style1" align="left">
 	<tr bgcolor="#FFCC00">
 		<td>
-		<input type="number" name="attr_character_strength" class="textinput-number45" value="10" min="-25" max="25" /></td>
-		<td style="width: 100px" align="center">
-		<button style="width:100px" class ="sheet-blank-roll-button" type="roll" name="roll_stregth_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_strength} Strength}} {{Result=[[@{character_strength}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Strength</button></td>
+		<input type="number" name="attr_character_strength" class="textinput-numberpercent" value="10" min="-25" max="25" /></td>
+		<td align="center">
+		<button style="width:120px" class ="sheet-blank-roll-button" type="roll" name="roll_stregth_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_strength} Strength}} {{Result=[[@{character_strength}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Strength</button></td>
 		<td>
-		<table>
-				<td style="width: 59px">percentile</td>
-				<td>
-		<input type="number" class="textinput-number45" name="attr_character_str_percentile" value="0" /></td>
-				<td style="width: 42px">hit adj</td>
-				<td style="width: 28px">
+		<table width="100%" style="float:left;">
+				<td class="width80">percentile</td>
+				<td class="width80">
+		<input type="number" class="textinput-numberpercent" name="attr_character_str_percentile" value="0" /></td>
+				<td class="width80">hit adj</td>
+				<td class="width80">
 		<input type="text" name="attr_character_str_hit" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 52px">dmg adj</td>
-				<td style="width: 28px">
-		<input type="text" name="attr_character_str_dmg" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 47px">wt. adj</td>
-				<td style="width: 28px">
+				<td class="width80">dmg adj</td>
+				<td class="width80">
+				<input type="text" name="attr_character_str_dmg" style="width: 28px" value="0" size="3" /></td>
+				<td class="width80">wt. adj</td>
+				<td class="width80">
 		<input type="text" name="attr_character_str_weight" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 72px">open doors</td>
-				<td style="width: 28px">
+				<td class="width80">open doors</td>
+				<td class="width80">
 		<input type="text" name="attr_character_str_doors" style="width: 28px" value="1" size="3" /></td>
-				<td style="width: 62px">bend bars</td>
-				<td style="width: 28px">
+				<td class="width80">bend bars</td>
+				<td class="width80">
 		<input type="text" name="attr_character_str_bendbars" style="width: 28px" value="0" size="3" /></td>
 		</table>
 		</td>
 	</tr>
 	<tr bgcolor="#FFCC99">
 		<td>
-		<input type="number" name="attr_character_intelligence" class="textinput-number45" value="10" min="-25" max="25" /></td>
-		<td style="width: 100px" align="center">
-		<button style="width:100px" class ="sheet-blank-roll-button" type="roll" name="roll_intelligence_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_intelligence} Intelligence}} {{Result=[[@{character_intelligence}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Intelligence</button>
+		<input type="number" name="attr_character_intelligence" class="textinput-numberpercent" value="10" min="-25" max="25" /></td>
+		<td align="center">
+		<button style="width:120px" class ="sheet-blank-roll-button" type="roll" name="roll_intelligence_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_intelligence} Intelligence}} {{Result=[[@{character_intelligence}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Intelligence</button>
 		</td>
-		<td>		<table>
-				<td style="width: 59px">percentile</td>
-				<td>
-		<input type="number" class="textinput-number45"  name="attr_character_int_percentile"  value="0" /></td>
-				<td style="width: 42px">+lang</td>
-				<td style="width: 28px">
+		<td>
+		<table width="100%" style="float:left;">
+				<td class="width80">percentile</td>
+				<td class="width80">
+		<input type="number" class="textinput-numberpercent"  name="attr_character_int_percentile"  value="0" /></td>
+				<td class="width80">+lang</td>
+				<td class="width80">
 		<input type="text" name="attr_character_int_language" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 52px">know spell</td>
-				<td style="width: 28px">
+				<td class="width80">know spell</td>
+				<td class="width80">
 		<input type="text" name="attr_character_int_knowspell" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 47px">min. spells</td>
-				<td style="width: 28px">
+				<td class="width80">min. spells</td>
+				<td class="width80">
 		<input type="text" name="attr_character_int_minspells" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 72px">max spells</td>
-				<td style="width: 28px">
+				<td class="width80">max spells</td>
+				<td class="width80">
 		<input type="text" name="attr_character_int_maxspells" style="width: 28px" value="0" size="3" /></td>
 		</table>
 </td>
 	</tr>
 	<tr bgcolor="#FFCC00">
 		<td>
-		<input type="number" name="attr_character_wisdom" class="textinput-number45" value="10" min="-25" max="25" /></td>
-		<td style="width: 100px" align="center">
-		<button style="width:100px" class ="sheet-blank-roll-button" type="roll" name="roll_wisdom_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_wisdom} Wisdom}} {{Result=[[@{character_wisdom}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Wisdom</button>
+		<input type="number" name="attr_character_wisdom" class="textinput-numberpercent" value="10" min="-25" max="25" /></td>
+		<td align="center">
+		<button style="width:120px" class ="sheet-blank-roll-button" type="roll" name="roll_wisdom_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_wisdom} Wisdom}} {{Result=[[@{character_wisdom}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Wisdom</button>
 		</td>
-		<td>		<table>
-				<td style="width: 59px">percentile</td>
-				<td>
-		<input type="number" class="textinput-number45" name="attr_character_wis_percentile"  value="0" /></td>
-				<td style="width: 42px">mental save</td>
-				<td style="width: 28px">
+		<td>
+		<table width="100%" style="float:left;">
+				<td  class="width80">percentile</td>
+				<td class="width80">
+		<input type="number" class="textinput-numberpercent" name="attr_character_wis_percentile"  value="0" /></td>
+				<td class="width80">mental save</td>
+				<td class="width80">
 		<input type="text" name="attr_character_wis_save" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 52px">spell failure</td>
-				<td style="width: 28px">
+				<td class="width80">spell failure</td>
+				<td class="width80">
 		<input type="text" name="attr_character_wis_failure" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 47px">bonus spells</td>
-				<td style="width: 28px">
+				<td class="width80">bonus spells</td>
+				<td class="width80">
 		<input type="text" name="attr_character_wis_bonus" style="width: 132px" value="0" /></td>
 		</table>
 </td>
 	</tr>
 	<tr bgcolor="#FFCC99">
 		<td>
-		<input type="number" name="attr_character_dexterity" class="textinput-number45" value="10" min="-25" max="25" /></td>
-		<td style="width: 100px" align="center">
-		<button style="width:100px" class ="sheet-blank-roll-button" type="roll" name="roll_dexterity_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_dexterity} Dexterity}} {{Result=[[@{character_dexterity}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Dexterity</button>
+		<input type="number" name="attr_character_dexterity" class="textinput-numberpercent" value="10" min="-25" max="25" /></td>
+		<td align="center">
+		<button style="width:120px" class ="sheet-blank-roll-button" type="roll" name="roll_dexterity_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_dexterity} Dexterity}} {{Result=[[@{character_dexterity}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Dexterity</button>
 		</td>
-		<td>		<table>
-				<td style="width: 59px">percentile</td>
-				<td>
-		<input type="number" class="textinput-number45" name="attr_character_dex_percentile"  value="0"/></td>
-				<td style="width: 42px">surprise adj.</td>
-				<td style="width: 28px">
+		<td>
+		<table width="100%" style="float:left;">
+				<td class="width80">percentile</td>
+				<td class="width80">
+		<input type="number" class="textinput-numberpercent" name="attr_character_dex_percentile"  value="0"/></td>
+				<td class="width80">surprise adj.</td>
+				<td class="width80">
 		<input type="text" name="attr_character_dex_surprise" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 52px">missile adj.</td>
-				<td style="width: 28px">
+				<td class="width80">missile adj.</td>
+				<td class="width80">
 		<input type="text" name="attr_character_dex_missile" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 47px">defense adj.</td>
-				<td style="width: 28px">
+				<td class="width80">defense adj.</td>
+				<td class="width80">
 		<input type="text" name="attr_character_dex_defense" style="width: 28px" value="0" size="4" /></td>
 		</table>
 </td>
 	</tr>
 	<tr bgcolor="#FFCC00">
 		<td>
-		<input type="number" name="attr_character_constitution" class="textinput-number45" value="10" min="-25" max="25" /></td>
-		<td style="width: 100px" align="center">
-		<button style="width:100px" class ="sheet-blank-roll-button" type="roll" name="roll_constition_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_constitution} Constitution}} {{Result=[[@{character_constitution}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Constitution</button>
+		<input type="number" name="attr_character_constitution" class="textinput-numberpercent" value="10" min="-25" max="25" /></td>
+		<td align="center">
+		<button style="width:120px" class ="sheet-blank-roll-button" type="roll" name="roll_constition_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_constitution} Constitution}} {{Result=[[@{character_constitution}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Constitution</button>
 		</td>
-		<td>		<table>
-				<td style="width: 59px">percentile</td>
-				<td>
-		<input type="number" class="textinput-number45" name="attr_character_con_percentile"  value="0"/></td>
-				<td style="width: 42px">health adj.</td>
-				<td style="width: 28px">
+		<td>
+		<table width="100%" style="float:left;">
+				<td class="width80">percentile</td>
+				<td class="width80">
+		<input type="number" class="textinput-numberpercent" name="attr_character_con_percentile"  value="0"/></td>
+				<td class="width80">health adj.</td>
+				<td class="width80">
 		<input type="text" name="attr_character_con_health" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 52px">system shock</td>
-				<td style="width: 28px">
+				<td class="width80">system shock</td>
+				<td class="width80">
 		<input type="text" name="attr_character_con_systemshock" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 47px">resurrection</td>
-				<td style="width: 28px">
+				<td class="width80">resurrection</td>
+				<td class="width80">
 		<input type="text" name="attr_character_con_resurrection" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 72px">regeneration</td>
-				<td style="width: 28px">
+				<td class="width80">regeneration</td>
+				<td class="width80">
 		<input type="text" name="attr_character_con_regen" style="width: 28px" value="0" size="3" /></td>
 		</table>
 </td>
 	</tr>
 	<tr bgcolor="#FFCC99">
 		<td>
-		<input type="number" name="attr_character_charisma" class="textinput-number45" value="10" min="-25" max="25"></td>
-		<td style="width: 100px" align="center">
-		<button style="width:100px" class ="sheet-blank-roll-button" type="roll" name="roll_charisma_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_charisma} Charisma}} {{Result=[[@{character_charisma}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Charisma</button>
+		<input type="number" name="attr_character_charisma" class="textinput-numberpercent" value="10" min="-25" max="25" /></td>
+		<td align="center">
+		<button style="width:120px" class ="sheet-blank-roll-button" type="roll" name="roll_charisma_check" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=Checking @{character_charisma} Charisma}} {{Result=[[@{character_charisma}-(1d20-(?{Situational Modifier|0}))]]}} {{Details=0 or Greater is the success amount. Less than 0 you failed by that amount!}}">Charisma</button>
 		</td>
-		<td>		<table>
-				<td style="width: 59px">percentile</td>
-				<td>
-		<input type="number" class="textinput-number45" name="attr_character_chr_percentile"  value="0" /></td>
-				<td style="width: 42px">max hench.</td>
-				<td style="width: 28px">
+		<td>
+		<table width="100%" style="float:left;">
+				<td class="width80">percentile</td>
+				<td class="width80">
+		<input type="number" class="textinput-numberpercent" name="attr_character_chr_percentile"  value="0" /></td>
+				<td class="width80">max hench.</td>
+				<td class="width80">
 		<input type="text" name="attr_character_chr_maxhenchmen" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 52px">loyalty base</td>
-				<td style="width: 28px">
+				<td class="width80">loyalty base</td>
+				<td class="width80">
 		<input type="text" name="attr_character_chr_loyalty" style="width: 28px" value="0" size="3" /></td>
-				<td style="width: 47px">reaction&nbsp; adj.</td>
-				<td style="width: 28px">
+				<td class="width80">reaction&nbsp; adj.</td>
+				<td class="width80">
 		<input type="text" name="attr_character_chr_reaction" style="width: 28px" value="0" size="3" /></td>
 		</table>
 </td>
@@ -262,7 +267,7 @@
 				     <td class="repeat-headers" style="padding: 0px; width: 72px">Hit Modifier</td>
 				     <td class="repeat-headers" style="padding: 0px; width: 72px">Damage Modifier</td>
 					 <td class="repeat-headers" style="padding: 0px; width: 170px">Details</td>
-				     <td class="repeat-headers" style="padding: 0px; width: 72px">Proficiency Point Cost</td>
+				     <td class="repeat-headers" style="padding: 0px; width: 72px">Point Cost</td>
 				    </tr>
 				</table>
 				
@@ -290,7 +295,7 @@
 			     <td class="repeat-headers"  style="width: 170px">Name</td>
 			     <td class="repeat-headers"  style="width: 90px">Ability Base</td>
 			     <td class="repeat-headers"  style="width: 72px">Modifier</td>
-			     <td class="repeat-headers"  style="width: 72px">Proficiency Point Cost</td>
+			     <td class="repeat-headers"  style="width: 72px">Point Cost</td>
 				</tr>
 			</table>
 			<fieldset class="repeating_profs">
@@ -545,9 +550,9 @@
 <table class="enclose" border="5" width="100%">
 <tr class="enclose" align="center">
 	<td class="enclose" style="background:#663300; height: 24px;">
-	   	<button class="sheet-attack-buttons" style="width:65px;" type="roll" name="roll_attack_check" value="?{Send to|Everyone,|GM-Only,/w GM} &{template:default} {{name=@{character_name} attacks with @{atk_name} }} {{hit AC=[[@{THACO}-(1d20+(@{atk_modifier_total_hit}+?{Situational Hit Modifier|0}))]] }} {{ Damage=[[@{atk_dmg}+@{atk_modifier_total_dmg}]] (S/M), [[@{atk_ldmg}+@{atk_modifier_total_dmg}]] (L) }} {{Type=@{atk_dmg_type} }} {{Range=@{atk_range} }}">Attack</button>
-		<input readonly="true" class="auto-style2" style="-webkit-border-radius: 28;-moz-border-radius: 28;border-radius: 28px; background:#996633; color:white; font-style:bold; border:none; text-align:center;" type="text"  name="attr_atk_name" style="width: 200px"  />
-	   	<button class="sheet-attack-buttons" style="width:65px;" type="roll" name="roll_attack_init" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=@{character_name} rolls initiative with @{atk_name} }} {{Initiative=[[1d10+(@{atk_speedfactor}+?{Situational Initiative Modifier|0})&{tracker}]] }}">Initiative</button>
+	   	<button class="sheet-attack-buttons" style="width:75px;" type="roll" name="roll_attack_check" value="?{Send to|Everyone,|GM-Only,/w GM} &{template:default} {{name=@{character_name} attacks with @{atk_name} }} {{hit AC=[[@{THACO}-(1d20+(@{atk_modifier_total_hit}+?{Situational Hit Modifier|0}))]] }} {{ Damage=[[@{atk_dmg}+@{atk_modifier_total_dmg}]] (S/M), [[@{atk_ldmg}+@{atk_modifier_total_dmg}]] (L) }} {{Type=@{atk_dmg_type} }} {{Range=@{atk_range} }}">Attack</button>
+		<input readonly="true" class="auto-style2" style="width: 200px; -webkit-border-radius: 28;-moz-border-radius: 28;border-radius: 28px; background:#996633; color:white; font-style:bold; border:none; text-align:center;" type="text"  name="attr_atk_name"  />
+	   	<button class="sheet-attack-buttons" style="width:75px;" type="roll" name="roll_attack_init" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=@{character_name} rolls initiative with @{atk_name} }} {{Initiative=[[1d10+(@{atk_speedfactor}+?{Situational Initiative Modifier|0})&{tracker}]] }}">Initiative</button>
    	</td>
 </tr>
 
@@ -1071,18 +1076,18 @@
 
 <strong>Notes</strong>
 
-<fieldset class="repeating_notes" style="width:100%;">
-	<div class='sheet-col' style="width:100%; background:navy; text-align:center; color:white;">
-		<table align="center" width="100%"><input type="checkbox" name="attr_notes_hidewindow" class="hideoption" /><input type="text"  value="New Note" name="attr_notes_name" style="width: 200px"  /></table>
+<fieldset class="repeating_notes" style="width:100%;" align="center" >
+	<div class='sheet-col' style="width:100%; background:#ffcc00; text-align:center; color:white;">
+	<input type="checkbox" name="attr_notes_hidewindow" class="hideoption" style="vertical-align:middle; text-align:center; float:none; " /><input type="text"  value="New Note" name="attr_notes_name" style="width: 200px"  />
 		<div class="hidebody"style="width:100%;">
 			<table class="repeat-table-style" width="100%">
-			<tr bgcolor="orange">
+			<tr bgcolor="black">
 			     <td  class="repeat-tds"><textarea name="attr_notes_text"></textarea></td>
 			</tr>
 			</table>
 		</div>
 	</div>
-	<div class='sheet-col' align="center" style="width:100%; background:#996600; height:15px;">
+	<div class='sheet-col' align="center" style="width:100%; background:black; height:15px;">
 	</div>
 
 </fieldset> 
