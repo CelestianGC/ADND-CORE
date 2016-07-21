@@ -15,7 +15,7 @@
 </style>
 </head>
 
-<body style="background-image: url('http://i.imgur.com/qQZNFQ3.jpg')">
+<body>
 
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" title="General" checked="checked" />
 <input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2" title="Skills" />
@@ -286,7 +286,7 @@
 <div class="sheet-tab-content sheet-tab2">
 <br />
 	<div>
-			<input type="checkbox" name="attr_hide_weaponprofs" class="hideoption" /><strong>Weapon Proficiencies</strong>
+			<input type="checkbox" name="attr_hide_weaponprofs" class="hideoption" /><strong>Hide Weapon Proficiencies</strong>
 			<div class="hidebody">
 				<table class="repeat-table-style" width="100%">
 					<tr>
@@ -314,7 +314,7 @@
 	</div>
 	
 	<div>
-			<input type="checkbox" name="attr_hide_nonweaponprofs" class="hideoption" /><strong>Non-Weapon Proficiencies</strong>
+			<input type="checkbox" name="attr_hide_nonweaponprofs" class="hideoption" /><strong>Hide Non-Weapon Proficiencies</strong>
 			<div class="hidebody">
 			<table class="repeat-table-style" width="100%">
 				<tr>
@@ -357,7 +357,7 @@
 	</div>
 
 	<div>
-		<input type="checkbox" name="attr_hide_skills" class="hideoption" /><strong>Skills</strong>
+		<input type="checkbox" name="attr_hide_skills" class="hideoption" /><strong>Hide Skills</strong>
 		<div class="hidebody">
 			<table style='border-collapse: collapse; border-spacing: 0;' width="100%">
 			<tr>
@@ -408,7 +408,7 @@
 	</div>
 	
 	<div>
-		<input type="checkbox" name="attr_hide_secondaryskills" class="hideoption" checked="checked" /><strong>Secondary Skills</strong>
+		<input type="checkbox" name="attr_hide_secondaryskills" class="hideoption" checked="checked" /><strong>Hide Secondary Skills</strong>
 		<div class="hidebody">
 			<table class="repeat-table-style" width="100%">
 				<tr>
@@ -430,7 +430,7 @@
 	</div>
 
 	<div>
-		<input type="checkbox" name="attr_hide_languages" class="hideoption" checked="checked" /><strong>Languages</strong>
+		<input type="checkbox" name="attr_hide_languages" class="hideoption" checked="checked" /><strong>Hide Languages</strong>
 		<div class="hidebody">
 			<table class="repeat-table-style" width="100%">
 				<tr>
@@ -713,83 +713,102 @@
 <br />
 
 	<div>
-		<input type="checkbox" name="attr_hide_spells" class="hideoption" /><strong>Spells</strong>
+		<input type="checkbox" name="attr_hide_spells" class="hideoption-nest1" /><strong>Hide Spells</strong>
+		<div class="hidebody-nest1">
+
+		<input type="checkbox" name="attr_hide_caster_arcane" class="hideoption-nest2" /><strong>Hide Arcane Caster</strong>
+		<div class="hidebody-nest2">
+			<table width="100%">
+			<tr>
+			<td>
+					 
+					 		 <table class="repeat-table-style" width="100%">
+					 <tr>
+						 <td align="center" colspan="12" style="height: 5px; background:teal; color:white; font-style:bold;">Arcane Spell Slots</td>
+					 </tr>
+					 <tr>
+					 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">Level</td>
+					 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">0</td>
+					 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">1</td>
+					 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">2</td>
+					 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">3</td>
+					 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">4</td>
+					 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">5</td>
+					 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">6</td>
+					 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">7</td>
+					 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">8</td>
+					 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">9</td>
+					 </tr>
+					 
+					 <tr>
+					 	<td class="spellslot-headers" style="font-style:bold; color:maroon;">Slot</td>
+					 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base0}+@{spell_arcane_race0}+@{spell_arcane_class0}+@{spell_arcane_bonus0}+@{spell_arcane_other0}" name="attr_spell_arcane_total0"/></td>
+					 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base1}+@{spell_arcane_race1}+@{spell_arcane_class1}+@{spell_arcane_bonus1}+@{spell_arcane_other1}" name="attr_spell_arcane_total1"/></td>
+					 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base2}+@{spell_arcane_race2}+@{spell_arcane_class2}+@{spell_arcane_bonus2}+@{spell_arcane_other2}" name="attr_spell_arcane_total2"/></td>
+					 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base3}+@{spell_arcane_race3}+@{spell_arcane_class3}+@{spell_arcane_bonus3}+@{spell_arcane_other3}" name="attr_spell_arcane_total3"/></td>
+					 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base4}+@{spell_arcane_race4}+@{spell_arcane_class4}+@{spell_arcane_bonus4}+@{spell_arcane_other4}" name="attr_spell_arcane_total4"/></td>
+					 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base5}+@{spell_arcane_race5}+@{spell_arcane_class5}+@{spell_arcane_bonus5}+@{spell_arcane_other5}" name="attr_spell_arcane_total5"/></td>
+					 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base6}+@{spell_arcane_race6}+@{spell_arcane_class6}+@{spell_arcane_bonus6}+@{spell_arcane_other6}" name="attr_spell_arcane_total6"/></td>
+					 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base7}+@{spell_arcane_race7}+@{spell_arcane_class7}+@{spell_arcane_bonus7}+@{spell_arcane_other7}" name="attr_spell_arcane_total7"/></td>
+					 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base8}+@{spell_arcane_race8}+@{spell_arcane_class8}+@{spell_arcane_bonus8}+@{spell_arcane_other8}" name="attr_spell_arcane_total8"/></td>
+					 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base9}+@{spell_arcane_race9}+@{spell_arcane_class9}+@{spell_arcane_bonus9}+@{spell_arcane_other9}" name="attr_spell_arcane_total9"/></td>
+					 </tr>
+					 </table>
+			</td></tr>		 
+			 <tr>
+				 <td align="center" colspan="10" style="height: 5px; background:black;"></td>
+			 </tr>
+			</table>	
+		</div>
+		
+		<br />
+
+		<input type="checkbox" name="attr_hide_caster_divine" class="hideoption" /><strong>Hide Divine Caster</strong>
 		<div class="hidebody">
-
-<table width="100%">
-<tr>
-<td>
-		 
-		 		 <table class="repeat-table-style" width="100%">
-		 <tr>
-			 <td align="center" colspan="12" style="height: 5px; background:teal; color:white; font-style:bold;">Arcane Spell Slots</td>
-		 </tr>
-		 <tr>
-		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">Level</td>
-		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">0</td>
-		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">1</td>
-		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">2</td>
-		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">3</td>
-		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">4</td>
-		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">5</td>
-		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">6</td>
-		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">7</td>
-		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">8</td>
-		 	<td class="spellslot-headers" style="font-style:bold;background:#FFCC00;">9</td>
-		 </tr>
-		 
-		 <tr>
-		 	<td class="spellslot-headers" style="font-style:bold; color:maroon;">Slot</td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base0}+@{spell_arcane_race0}+@{spell_arcane_class0}+@{spell_arcane_level0}+@{spell_arcane_other0}" name="attr_spell_arcane_total0"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base1}+@{spell_arcane_race1}+@{spell_arcane_class1}+@{spell_arcane_level1}+@{spell_arcane_other1}" name="attr_spell_arcane_total1"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base2}+@{spell_arcane_race2}+@{spell_arcane_class2}+@{spell_arcane_level2}+@{spell_arcane_other2}" name="attr_spell_arcane_total2"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base3}+@{spell_arcane_race3}+@{spell_arcane_class3}+@{spell_arcane_level3}+@{spell_arcane_other3}" name="attr_spell_arcane_total3"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base4}+@{spell_arcane_race4}+@{spell_arcane_class4}+@{spell_arcane_level4}+@{spell_arcane_other4}" name="attr_spell_arcane_total4"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base5}+@{spell_arcane_race5}+@{spell_arcane_class5}+@{spell_arcane_level5}+@{spell_arcane_other5}" name="attr_spell_arcane_total5"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base6}+@{spell_arcane_race6}+@{spell_arcane_class6}+@{spell_arcane_level6}+@{spell_arcane_other6}" name="attr_spell_arcane_total6"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base7}+@{spell_arcane_race7}+@{spell_arcane_class7}+@{spell_arcane_level7}+@{spell_arcane_other7}" name="attr_spell_arcane_total7"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base8}+@{spell_arcane_race8}+@{spell_arcane_class8}+@{spell_arcane_level8}+@{spell_arcane_other8}" name="attr_spell_arcane_total8"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_arcane_base9}+@{spell_arcane_race9}+@{spell_arcane_class9}+@{spell_arcane_level9}+@{spell_arcane_other9}" name="attr_spell_arcane_total9"/></td>
-		 </tr>
-		 </table>
-</td>
-<td>
-		 <table class="repeat-table-style" width="100%">
-		 <tr>
-			 <td align="center" colspan="12" style="height: 5px; background:navy; color:white; font-style:bold;">Divine Spell Slots</td>
-		 </tr>
-		 <tr>
-		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">Level</td>
-		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">0</td>
-		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">1</td>
-		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">2</td>
-		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">3</td>
-		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">4</td>
-		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">5</td>
-		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">6</td>
-		 	<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">7</td>
-		 </tr>
-		 
-		 <tr>
-		 	<td class="spellslot-headers" style="font-style:bold; color:maroon;">Slot</td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base0}+@{spell_divine_race0}+@{spell_divine_class0}+@{spell_divine_level0}+@{spell_divine_other0}" name="attr_spell_divine_total0"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base1}+@{spell_divine_race1}+@{spell_divine_class1}+@{spell_divine_level1}+@{spell_divine_other1}" name="attr_spell_divine_total1"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base2}+@{spell_divine_race2}+@{spell_divine_class2}+@{spell_divine_level2}+@{spell_divine_other2}" name="attr_spell_divine_total2"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base3}+@{spell_divine_race3}+@{spell_divine_class3}+@{spell_divine_level3}+@{spell_divine_other3}" name="attr_spell_divine_total3"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base4}+@{spell_divine_race4}+@{spell_divine_class4}+@{spell_divine_level4}+@{spell_divine_other4}" name="attr_spell_divine_total4"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base5}+@{spell_divine_race5}+@{spell_divine_class5}+@{spell_divine_level5}+@{spell_divine_other5}" name="attr_spell_divine_total5"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base6}+@{spell_divine_race6}+@{spell_divine_class6}+@{spell_divine_level6}+@{spell_divine_other6}" name="attr_spell_divine_total6"/></td>
-		 	<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base7}+@{spell_divine_race7}+@{spell_divine_class7}+@{spell_divine_level7}+@{spell_divine_other7}" name="attr_spell_divine_total7"/></td>
-		 </tr>
-		 </table>
-		 
-</td></tr>		 
- <tr>
-	 <td align="center" colspan="10" style="height: 5px; background:black;"></td>
- </tr>
-</table>		    
-
+			<table width="100%">
+			<tr>
+			<td>
+			
+				<table class="repeat-table-style" width="100%">
+				<tr>
+				 <td align="center" colspan="12" style="height: 5px; background:navy; color:white; font-style:bold;">Divine Spell Slots</td>
+				</tr>
+				<tr>
+				<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">Level</td>
+				<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">0</td>
+				<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">1</td>
+				<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">2</td>
+				<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">3</td>
+				<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">4</td>
+				<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">5</td>
+				<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">6</td>
+				<td class="spellslot-headers" style="font-style:bold; background:#FFCC00;">7</td>
+				</tr>
+				
+				<tr>
+				<td class="spellslot-headers" style="font-style:bold; color:maroon;">Slot</td>
+				<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base0}+@{spell_divine_race0}+@{spell_divine_class0}+@{spell_divine_bonus0}+@{spell_divine_other0}" name="attr_spell_divine_total0"/></td>
+				<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base1}+@{spell_divine_race1}+@{spell_divine_class1}+@{spell_divine_bonus1}+@{spell_divine_other1}" name="attr_spell_divine_total1"/></td>
+				<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base2}+@{spell_divine_race2}+@{spell_divine_class2}+@{spell_divine_bonus2}+@{spell_divine_other2}" name="attr_spell_divine_total2"/></td>
+				<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base3}+@{spell_divine_race3}+@{spell_divine_class3}+@{spell_divine_bonus3}+@{spell_divine_other3}" name="attr_spell_divine_total3"/></td>
+				<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base4}+@{spell_divine_race4}+@{spell_divine_class4}+@{spell_divine_bonus4}+@{spell_divine_other4}" name="attr_spell_divine_total4"/></td>
+				<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base5}+@{spell_divine_race5}+@{spell_divine_class5}+@{spell_divine_bonus5}+@{spell_divine_other5}" name="attr_spell_divine_total5"/></td>
+				<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base6}+@{spell_divine_race6}+@{spell_divine_class6}+@{spell_divine_bonus6}+@{spell_divine_other6}" name="attr_spell_divine_total6"/></td>
+				<td class="spellslot-headers"><input class="spellslot" disabled="true" value="@{spell_divine_base7}+@{spell_divine_race7}+@{spell_divine_class7}+@{spell_divine_bonus7}+@{spell_divine_other7}" name="attr_spell_divine_total7"/></td>
+				</tr>
+				</table>
+			
+			</td></tr>		 
+			<tr>
+			<td align="center" colspan="10" style="height: 5px; background:black;"></td>
+			</tr>
+			</table>		    
+	</div>
 		    
+		<br />
+		<input type="checkbox" name="attr_hide_spells_advanced" class="hideoption-nest6" /><strong>Hide Advanced Spell Tracker</strong>
+		<div class="hidebody-nest6">
+
 		<fieldset name="repeating_spells" class="repeating_spells">
 		<div  class="enclose" style="background:#663300; color:white;" align="center">
 		<input type="checkbox" name="attr_spell_hidewindow" class="hideoption" style="vertical-align:middle; text-align:center; float:none; " />
@@ -845,7 +864,57 @@
 		</div>
 		</div>
 		</fieldset>
-		
+	</div>
+	<br />
+
+		<input type="checkbox" name="attr_hide_spells_basic" checked="checked" class="hideoption-nest5" /><strong>Hide Basic Spell Tracker</strong>
+		<div class="hidebody-nest5">
+			<fieldset name="repeating_spells_basic0" class="repeating_spells_basic0">
+				<div class='sheet-col'>Level 0</div>
+				<div class="sheet-col"><input class="textinput-normal" type="text" value="New Spell" name="attr_spell_basic0_name"/></div>
+			</fieldset>
+			<fieldset name="repeating_spells_basic1" class="repeating_spells_basic1">
+				<div class='sheet-col'>Level 1</div>
+				<div class="sheet-col"><input class="textinput-normal" type="text" value="New Spell" name="attr_spell_basic1_name"/></div>
+			</fieldset>
+			<fieldset name="repeating_spells_basic1" class="repeating_spells_basic1">
+				<div class='sheet-col'>Level 2</div>
+				<div class="sheet-col"><input class="textinput-normal" type="text" value="New Spell" name="attr_spell_basic2_name"/></div>
+			</fieldset>
+			<fieldset name="repeating_spells_basic1" class="repeating_spells_basic1">
+				<div class='sheet-col'>Level 3</div>
+				<div class="sheet-col"><input class="textinput-normal" type="text" value="New Spell" name="attr_spell_basic3_name"/></div>
+			</fieldset>
+			<fieldset name="repeating_spells_basic1" class="repeating_spells_basic1">
+				<div class='sheet-col'>Level 4</div>
+				<div class="sheet-col"><input class="textinput-normal" type="text" value="New Spell" name="attr_spell_basic4_name"/></div>
+			</fieldset>
+			<fieldset name="repeating_spells_basic1" class="repeating_spells_basic1">
+				<div class='sheet-col'>Level 5</div>
+				<div class="sheet-col"><input class="textinput-normal" type="text" value="New Spell" name="attr_spell_basic5_name"/></div>
+			</fieldset>
+			<fieldset name="repeating_spells_basic1" class="repeating_spells_basic1">
+				<div class='sheet-col'>Level 6</div>
+				<div class="sheet-col"><input class="textinput-normal" type="text" value="New Spell" name="attr_spell_basic6_name"/></div>
+			</fieldset>
+			<fieldset name="repeating_spells_basic1" class="repeating_spells_basic1">
+				<div class='sheet-col'>Level 7</div>
+				<div class="sheet-col"><input class="textinput-normal" type="text" value="New Spell" name="attr_spell_basic7_name"/></div>
+			</fieldset>
+			<fieldset name="repeating_spells_basic1" class="repeating_spells_basic1">
+				<div class='sheet-col'>Level 8</div>
+				<div class="sheet-col"><input class="textinput-normal" type="text" value="New Spell" name="attr_spell_basic8_name"/></div>
+			</fieldset>
+			<fieldset name="repeating_spells_basic1" class="repeating_spells_basic1">
+				<div class='sheet-col'>Level 9</div>
+				<div class="sheet-col"><input class="textinput-normal" type="text" value="New Spell" name="attr_spell_basic9_name"/></div>
+			</fieldset>
+		<br />
+	</div>
+	<br />
+	
+	<input type="checkbox" name="attr_hide_caster_arcane" class="hideoption-nest3" /><strong>Hide Arcane Caster</strong>
+	<div class="hidebody-nest3">
 		 <table class="repeat-table-style" border="1" width="100%">
 		 <tr>
 			 <td align="center" colspan="10" style="height: 5px; background:teal; color:white; font-style:bold;">Arcane Spell Slots</td>
@@ -856,7 +925,7 @@
 		 	<td class="repeat-headers" style="font-style:bold;">Base</td>
 		 	<td class="repeat-headers" style="font-style:bold;">Race</td>
 		 	<td class="repeat-headers" style="font-style:bold;">Class</td>
-		 	<td class="repeat-headers" style="font-style:bold;">Level</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Bonus</td>
 		 	<td class="repeat-headers" style="font-style:bold;">Other</td>
 		 	<td class="repeat-headers" style="font-style:bold;">Total</td>
 		 </tr>
@@ -865,9 +934,9 @@
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base0"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race0"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class0"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_bonus0"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other0"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base0}+@{spell_arcane_race0}+@{spell_arcane_class0}+@{spell_arcane_level0}+@{spell_arcane_other0}" name="attr_spell_arcane_total0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base0}+@{spell_arcane_race0}+@{spell_arcane_class0}+@{spell_arcane_bonus0}+@{spell_arcane_other0}" name="attr_spell_arcane_total0"/></td>
 		 </tr>
 
 		 <tr style="background:#FFCC00;">
@@ -875,81 +944,81 @@
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base1"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race1"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class1"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_bonus1"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other1"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base1}+@{spell_arcane_race1}+@{spell_arcane_class1}+@{spell_arcane_level1}+@{spell_arcane_other1}" name="attr_spell_arcane_total1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base1}+@{spell_arcane_race1}+@{spell_arcane_class1}+@{spell_arcane_bonus1}+@{spell_arcane_other1}" name="attr_spell_arcane_total1"/></td>
 		 </tr>
 		 <tr>
 		 	<td class="repeat-headers" style="font-style:bold;">Level 2</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base2"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race2"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class2"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_bonus2"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other2"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base2}+@{spell_arcane_race2}+@{spell_arcane_class2}+@{spell_arcane_level2}+@{spell_arcane_other2}" name="attr_spell_arcane_total2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base2}+@{spell_arcane_race2}+@{spell_arcane_class2}+@{spell_arcane_bonus2}+@{spell_arcane_other2}" name="attr_spell_arcane_total2"/></td>
 		 </tr>
 		 <tr style="background:#FFCC00;">
 		 	<td class="repeat-headers" style="font-style:bold;">Level 3</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base3"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race3"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class3"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_bonus3"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other3"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base3}+@{spell_arcane_race3}+@{spell_arcane_class3}+@{spell_arcane_level3}+@{spell_arcane_other3}" name="attr_spell_arcane_total3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base3}+@{spell_arcane_race3}+@{spell_arcane_class3}+@{spell_arcane_bonus3}+@{spell_arcane_other3}" name="attr_spell_arcane_total3"/></td>
 		 </tr>
 		 <tr>
 		 	<td class="repeat-headers" style="font-style:bold;">Level 4</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base4"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race4"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class4"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_bonus4"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other4"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base4}+@{spell_arcane_race4}+@{spell_arcane_class4}+@{spell_arcane_level4}+@{spell_arcane_other4}" name="attr_spell_arcane_total4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base4}+@{spell_arcane_race4}+@{spell_arcane_class4}+@{spell_arcane_bonus4}+@{spell_arcane_other4}" name="attr_spell_arcane_total4"/></td>
 		 </tr>
 		 <tr style="background:#FFCC00;">
 		 	<td class="repeat-headers" style="font-style:bold;">Level 5</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base5"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race5"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class5"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_bonus5"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other5"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base5}+@{spell_arcane_race5}+@{spell_arcane_class5}+@{spell_arcane_level5}+@{spell_arcane_other5}" name="attr_spell_arcane_total5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base5}+@{spell_arcane_race5}+@{spell_arcane_class5}+@{spell_arcane_bonus5}+@{spell_arcane_other5}" name="attr_spell_arcane_total5"/></td>
 		 </tr>
 		 <tr>
 		 	<td class="repeat-headers" style="font-style:bold;">Level 6</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base6"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race6"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class6"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_bonus6"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other6"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base6}+@{spell_arcane_race6}+@{spell_arcane_class6}+@{spell_arcane_level6}+@{spell_arcane_other6}" name="attr_spell_arcane_total6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base6}+@{spell_arcane_race6}+@{spell_arcane_class6}+@{spell_arcane_bonus6}+@{spell_arcane_other6}" name="attr_spell_arcane_total6"/></td>
 		 </tr>
 		 <tr style="background:#FFCC00;">
 		 	<td class="repeat-headers" style="font-style:bold;">Level 7</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base7"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race7"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class7"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_bonus7"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other7"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base7}+@{spell_arcane_race7}+@{spell_arcane_class7}+@{spell_arcane_level7}+@{spell_arcane_other7}" name="attr_spell_arcane_total7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base7}+@{spell_arcane_race7}+@{spell_arcane_class7}+@{spell_arcane_bonus7}+@{spell_arcane_other7}" name="attr_spell_arcane_total7"/></td>
 		 </tr>
 		 <tr>
 		 	<td class="repeat-headers" style="font-style:bold;">Level 8</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base8"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race8"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class8"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level8"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_bonus8"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other8"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base8}+@{spell_arcane_race8}+@{spell_arcane_class8}+@{spell_arcane_level8}+@{spell_arcane_other8}" name="attr_spell_arcane_total8"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base8}+@{spell_arcane_race8}+@{spell_arcane_class8}+@{spell_arcane_bonus8}+@{spell_arcane_other8}" name="attr_spell_arcane_total8"/></td>
 		 </tr>
 		 <tr style="background:#FFCC00;">
 		 	<td class="repeat-headers" style="font-style:bold;">Level 9</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_base9"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_race9"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_class9"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_level9"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_bonus9"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_arcane_other9"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base9}+@{spell_arcane_race9}+@{spell_arcane_class9}+@{spell_arcane_level9}+@{spell_arcane_other9}" name="attr_spell_arcane_total9"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_arcane_base9}+@{spell_arcane_race9}+@{spell_arcane_class9}+@{spell_arcane_bonus9}+@{spell_arcane_other9}" name="attr_spell_arcane_total9"/></td>
 		 </tr>
 
 
@@ -957,7 +1026,11 @@
 			 <td align="center" colspan="10" style="height: 5px; background:black;"></td>
 		 </tr>
 		 </table>
+		</div>
+		<br />
 		
+		<input type="checkbox" name="attr_hide_caster_divine" class="hideoption-nest4" /><strong>Hide Divine Caster</strong>
+		<div class="hidebody-nest4">
 		 <table class="repeat-table-style" border="1" width="100%">
 		 <tr>
  			 <td align="center" colspan="10" style="height: 5px; background:navy; color:white; font-style:bold;">Divine Spell Slots</td>
@@ -968,7 +1041,7 @@
 		 	<td class="repeat-headers" style="font-style:bold;">Base</td>
 		 	<td class="repeat-headers" style="font-style:bold;">Race</td>
 		 	<td class="repeat-headers" style="font-style:bold;">Class</td>
-		 	<td class="repeat-headers" style="font-style:bold;">Level</td>
+		 	<td class="repeat-headers" style="font-style:bold;">Bonus</td>
 		 	<td class="repeat-headers" style="font-style:bold;">Other</td>
 		 	<td class="repeat-headers" style="font-style:bold;">Total</td>
 		 </tr>
@@ -977,9 +1050,9 @@
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base0"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race0"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class0"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_bonus0"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other0"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base0}+@{spell_divine_race0}+@{spell_divine_class0}+@{spell_divine_level0}+@{spell_divine_other0}" name="attr_spell_divine_total0"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base0}+@{spell_divine_race0}+@{spell_divine_class0}+@{spell_divine_bonus0}+@{spell_divine_other0}" name="attr_spell_divine_total0"/></td>
 		 </tr>
 
 		 <tr style="background:#FFCC00;">
@@ -987,63 +1060,63 @@
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base1"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race1"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class1"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_bonus1"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other1"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base1}+@{spell_divine_race1}+@{spell_divine_class1}+@{spell_divine_level1}+@{spell_divine_other1}" name="attr_spell_divine_total1"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base1}+@{spell_divine_race1}+@{spell_divine_class1}+@{spell_divine_bonus1}+@{spell_divine_other1}" name="attr_spell_divine_total1"/></td>
 		 </tr>
 		 <tr>
 		 	<td class="repeat-headers" style="font-style:bold;">Level 2</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base2"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race2"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class2"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_bonus2"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other2"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base2}+@{spell_divine_race2}+@{spell_divine_class2}+@{spell_divine_level2}+@{spell_divine_other2}" name="attr_spell_divine_total2"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base2}+@{spell_divine_race2}+@{spell_divine_class2}+@{spell_divine_bonus2}+@{spell_divine_other2}" name="attr_spell_divine_total2"/></td>
 		 </tr>
 		 <tr style="background:#FFCC00;">
 		 	<td class="repeat-headers" style="font-style:bold;">Level 3</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base3"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race3"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class3"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_bonus3"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other3"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base3}+@{spell_divine_race3}+@{spell_divine_class3}+@{spell_divine_level3}+@{spell_divine_other3}" name="attr_spell_divine_total3"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base3}+@{spell_divine_race3}+@{spell_divine_class3}+@{spell_divine_bonus3}+@{spell_divine_other3}" name="attr_spell_divine_total3"/></td>
 		 </tr>
 		 <tr>
 		 	<td class="repeat-headers" style="font-style:bold;">Level 4</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base4"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race4"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class4"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_bonus4"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other4"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base4}+@{spell_divine_race4}+@{spell_divine_class4}+@{spell_divine_level4}+@{spell_divine_other4}" name="attr_spell_divine_total4"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base4}+@{spell_divine_race4}+@{spell_divine_class4}+@{spell_divine_bonus4}+@{spell_divine_other4}" name="attr_spell_divine_total4"/></td>
 		 </tr>
 		 <tr style="background:#FFCC00;">
 		 	<td class="repeat-headers" style="font-style:bold;">Level 5</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base5"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race5"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class5"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_bonus5"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other5"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base5}+@{spell_divine_race5}+@{spell_divine_class5}+@{spell_divine_level5}+@{spell_divine_other5}" name="attr_spell_divine_total5"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base5}+@{spell_divine_race5}+@{spell_divine_class5}+@{spell_divine_bonus5}+@{spell_divine_other5}" name="attr_spell_divine_total5"/></td>
 		 </tr>
 		 <tr>
 		 	<td class="repeat-headers" style="font-style:bold;">Level 6</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base6"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race6"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class6"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_bonus6"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other6"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base6}+@{spell_divine_race6}+@{spell_divine_class6}+@{spell_divine_level6}+@{spell_divine_other6}" name="attr_spell_divine_total6"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base6}+@{spell_divine_race6}+@{spell_divine_class6}+@{spell_divine_bonus6}+@{spell_divine_other6}" name="attr_spell_divine_total6"/></td>
 		 </tr>
 		 <tr style="background:#FFCC00;">
 		 	<td class="repeat-headers" style="font-style:bold;">Level 7</td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_base7"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_race7"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_class7"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_level7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_bonus7"/></td>
 		 	<td class="repeat-headers"><input class="textinput-number" type="number" min="0" style="width:50px;" value="0" name="attr_spell_divine_other7"/></td>
-		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base7}+@{spell_divine_race7}+@{spell_divine_class7}+@{spell_divine_level7}+@{spell_divine_other7}" name="attr_spell_divine_total7"/></td>
+		 	<td class="repeat-headers"><input class="textinput-number" type="number" disabled="true" style="width:50px;" value="@{spell_divine_base7}+@{spell_divine_race7}+@{spell_divine_class7}+@{spell_divine_bonus7}+@{spell_divine_other7}" name="attr_spell_divine_total7"/></td>
 		 </tr>
 
 
@@ -1051,7 +1124,7 @@
 			 <td align="center" colspan="10" style="height: 5px; background:black;"></td>
 		 </tr>
 		 </table>
-
+		</div>
 		
 		</div>
 	</div>

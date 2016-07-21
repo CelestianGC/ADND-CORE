@@ -328,6 +328,12 @@ input.sheet-thaco-table-red {
      background-color: #DDD;
 }
 
+td.sheet-width80 {
+	
+	width:80px;
+	
+}
+
 input.sheet-hideoption
 {
     float: left;
@@ -338,8 +344,68 @@ input.sheet-hideoption:checked ~ div.sheet-hidebody
     display: none;
 }
 
-td.sheet-width80 {
-	
-	width:80px;
-	
+input.sheet-hideoption-nest1
+{
+    float: left;
+}
+
+input.sheet-hideoption-nest1:checked ~ div.sheet-hidebody-nest1
+{
+    display: none;
+}
+
+input.sheet-hideoption-nest2
+{
+    float: left;
+}
+
+input.sheet-hideoption-nest2:checked ~ div.sheet-hidebody-nest2
+{
+    display: none;
+}
+
+input.sheet-hideoption-nest3
+{
+    float: left;
+}
+
+input.sheet-hideoption-nest3:checked ~ div.sheet-hidebody-nest3
+{
+    display: none;
+}
+
+input.sheet-hideoption-nest4
+{
+    float: left;
+}
+
+input.sheet-hideoption-nest4:checked ~ div.sheet-hidebody-nest4
+{
+    display: none;
+}
+
+
+input.sheet-hideoption-nest5
+{
+    float: left;
+}
+
+input.sheet-hideoption-nest5:checked ~ div.sheet-hidebody-nest5
+{
+    display: none;
+}
+
+input.sheet-hideoption-nest6
+{
+    float: left;
+}
+
+input.sheet-hideoption-nest6:checked ~ div.sheet-hidebody-nest6
+{
+    display: none;
+}
+
+div.sheet-columns
+{ 
+	width: 150px; 
 }
