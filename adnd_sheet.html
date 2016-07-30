@@ -576,9 +576,9 @@
 <fieldset class="repeating_attacks">
 <div  class="enclose" style="background:#663300;" align="center">
 		<input type="checkbox" name="attr_notes_hidewindow" class="hideoption" style="vertical-align:middle; text-align:center; float:none; " />
-	   	<button class="sheet-attack-buttons" style="width:75px;" type="roll" name="roll_attack_check" value="?{Send to|Everyone,|GM-Only,/w GM} &{template:default} {{name=@{character_name} attacks with @{atk_name} }} {{hit AC=[[@{THACO}-(1d20+(@{atk_modifier_total_hit}+?{Situational Hit Modifier|0}))]] }} {{ Damage=[[@{atk_dmg}+@{atk_modifier_total_dmg}]] (S/M), [[@{atk_ldmg}+@{atk_modifier_total_dmg}]] (L) }} {{Type=@{atk_dmg_type} }} {{Range=@{atk_range} }}">Attack</button>
+	   	<button class="sheet-attack-buttons" style="width:95px;" type="roll" name="roll_attack_check" value="?{Send to|Everyone,|GM-Only,/w GM} &{template:default} {{name=@{character_name} attacks with @{atk_name} }} {{hit AC=[[@{THACO}-(1d20+(@{atk_modifier_total_hit}+?{Situational Hit Modifier|0}))]] }} {{ Damage=[[@{atk_dmg}+@{atk_modifier_total_dmg}]] (S/M), [[@{atk_ldmg}+@{atk_modifier_total_dmg}]] (L) }} {{Type=@{atk_dmg_type} }} {{Range=@{atk_range} }}">Attack</button>
 		<input readonly="true" class="auto-style2" style="width: 200px; -webkit-border-radius: 28;-moz-border-radius: 28;border-radius: 28px; background:#996633; color:white; font-style:bold; border:none; text-align:center;" type="text"  name="attr_atk_name"  />
-	   	<button class="sheet-attack-buttons" style="width:75px;" type="roll" name="roll_attack_init" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=@{character_name} rolls initiative with @{atk_name} }} {{Initiative=[[1d10+(@{atk_speedfactor}+?{Situational Initiative Modifier|0})&{tracker}]] }}">Initiative</button>
+	   	<button class="sheet-attack-buttons" style="width:95px;" type="roll" name="roll_attack_init" value="?{Send to|GM-Only,/w GM|Everyone,} &{template:default} {{name=@{character_name} rolls initiative with @{atk_name} }} {{Initiative=[[1d10+(@{atk_speedfactor}+?{Situational Initiative Modifier|0})&{tracker}]] }}">Initiative</button>
 
 	<div class="hidebody"style="width:100%;">
 
